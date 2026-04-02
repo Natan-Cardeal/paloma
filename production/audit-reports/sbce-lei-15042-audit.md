@@ -83,11 +83,9 @@
 
 ## 7. FAQ schema apenas em satelites
 
-**Status**: WARNING
-**Valor encontrado**: FAQPage schema presente no frontmatter. pageType = "urgencia". FAQ com 8 perguntas.
-**Esperado**: O brief original especifica "sem FAQ — urgencia regulatoria, atualizar frequentemente". O Agent 4 adicionou FAQPage com 8 perguntas.
-**Detalhes**: O brief explicitamente vetou FAQ para este artigo. O Agent 4 provavelmente seguiu a regra padrao de satelites (8-10 FAQs) sem considerar a excecao do brief. O conteudo das FAQs e de alta qualidade e factualmente correto. Porem, desobedece o brief. Alem disso, o campo pageType diz "urgencia" e nao "satelite", o que torna a regra do criterio 7 ambigua (urgencia nao e um dos tipos listados no criterio).
-**Correcao sugerida**: Decisao humana necessaria — manter ou remover o FAQPage. Argumentos para manter: as 8 FAQs sao relevantes e bem escritas, e cobrem duvidas reais. Argumentos para remover: o brief vetou FAQ para permitir atualizacoes frequentes sem revalidar o FAQ schema.
+**Status**: PASS (resolvido)
+**Valor encontrado**: FAQPage schema presente no frontmatter. FAQ com 8 perguntas de alta qualidade.
+**Decisao**: MANTER FAQPage schema. Decisao do fundador (2026-04-02): as 8 FAQs sao relevantes, cobrem duvidas reais e contribuem para GEO/AEO. O brief sera atualizado para permitir FAQ em artigos de urgencia quando o conteudo for de qualidade.
 
 ---
 
@@ -187,9 +185,9 @@
 **Brief**: Satelite urgencia, cluster inventario-carbono, keyword "lei 15042 2024 sbce mercado carbono"
 **Data**: 2026-04-02
 
-**Resultado**: 11/15 PASS | 4/15 FAIL (corrigidos) | 1/15 WARNING
+**Resultado**: 12/15 PASS | 4/15 FAIL (corrigidos) | 0/15 WARNING
 
-**Status geral**: APROVADO COM RESSALVAS (4 FAILs corrigidos pelo Auditor + 1 WARNING pendente de decisao humana)
+**Status geral**: APROVADO (4 FAILs corrigidos pelo Auditor, WARNING resolvido por decisao do fundador)
 
 **Fails corrigidos** (nao bloqueiam mais publicacao):
 1. Word count acima do range (2.716 -> 2.413) — cortei subsecao H3, compactei textos redundantes
@@ -200,4 +198,4 @@
 **Warnings** (decisao humana necessaria):
 1. **FAQPage schema adicionado pelo Agent 4** apesar do brief vetar FAQ ("sem FAQ — urgencia regulatoria, atualizar frequentemente"). As 8 FAQs sao de alta qualidade, mas desobedecem o brief. Opcoes: (a) remover FAQPage do schema e deletar o componente FAQ; (b) manter e atualizar o brief.
 
-**Proxima acao**: DECISAO HUMANA sobre o WARNING de FAQ, depois PUBLICAR.
+**Proxima acao**: PUBLICAR.
