@@ -1,8 +1,8 @@
 # PALOMA — Plataforma de Sustentabilidade para PMEs
 
-**Apresentação de Negócio v2.1** | Abril 2026 | Confidencial
+**Apresentação de Negócio v2.2** | Abril 2026 | Confidencial
 
-> Este documento consolida a visão estratégica, arquitetura de conteúdo, plano editorial de 12 meses, infraestrutura técnica e projeções de receita da Paloma — plataforma B2B de compliance ambiental para PMEs brasileiras. Versão 2.1 incorpora feedback da especialista técnica (remoção do Inventário GEE como produto) e 50+ recomendações do painel de 6 especialistas.
+> Este documento consolida a visão estratégica, arquitetura de conteúdo, plano editorial de 12 meses, infraestrutura técnica e projeções de receita da Paloma — plataforma B2B de sustentabilidade para PMEs brasileiras. Versão 2.2 incorpora: produto único (Relatório de Sustentabilidade em 3 tiers ESG), eliminação do RT, remoção de PGRS e GEE como produtos, expansão ESG completa (Ambiental + Social + Governança), e 50+ recomendações do painel de 6 especialistas.
 
 ---
 
@@ -34,9 +34,11 @@
 
 ### 1.1 Posicionamento
 
-Plataforma B2B de compliance ambiental para PMEs brasileiras. Dois produtos core — **PGRS** (Plano de Gerenciamento de Resíduos Sólidos) e **Relatório de Sustentabilidade** — entregues via modelo híbrido (self-service online + done-for-you para casos complexos), com revisão obrigatória por Responsável Técnico (RT) habilitado.
+Plataforma B2B de sustentabilidade para PMEs brasileiras. Produto único — **Relatório de Sustentabilidade (RS)** — entregue via modelo híbrido (self-service online + done-for-you para casos complexos) em 3 tiers de escopo: **Essencial** (16 indicadores), **Estruturado** (29 indicadores), **Estratégico** (39+ indicadores). A especialista técnica assina diretamente — sem necessidade de RT externo ou ART.
 
-**Diferencial competitivo**: Única plataforma que combina geração automatizada de documentos (PGRS + RS) com revisão por Responsável Técnico habilitado (ART assinada), a preços acessíveis para PMEs. Nenhum concorrente oferece esse modelo híbrido a esse ponto de preço.
+> **v2.2 — PGRS e GEE são conteúdo informacional/SEO apenas, não produtos.**
+
+**Diferencial competitivo**: Única plataforma que combina geração automatizada de Relatórios de Sustentabilidade (ESG completo: Ambiental + Social + Governança) com revisão por especialista qualificada, a preços acessíveis para PMEs. Nenhum concorrente oferece 3 tiers de escopo para PMEs com indicadores detalhados por pilar ESG.
 
 ### 1.2 Os 4 Pilares Estratégicos
 
@@ -53,99 +55,93 @@ A comunicação da Paloma segue uma voz editorial consistente:
 
 - **Tom**: Técnico-acessível. Nunca condescendente, nunca hermético. Fala como um consultor experiente que respeita a inteligência do leitor mas simplifica o complexo.
 - **Postura**: Autoridade fundamentada em legislação real. Toda afirmação cita lei, resolução ou norma.
-- **Persona**: O fundador(a) como autor principal — nome, foto, bio, LinkedIn. RT como revisor técnico com badge de credenciais.
+- **Persona**: O fundador(a) como autor principal — nome, foto, bio, LinkedIn. Especialista técnica como revisora com badge de formação/experiência.
 - **Diferenciação**: Honestidade radical — quando consultoria presencial é melhor que a plataforma, dizemos isso. Confiança se constrói com transparência.
 
 ### 1.4 E-E-A-T (Experience, Expertise, Authoritativeness, Trustworthiness)
 
-**BLOQUEADOR RESOLVIDO**: Todo conteúdo técnico (PGRS, RS) exige Responsável Técnico (RT) habilitado com ART. Sem RT, a plataforma configura exercício ilegal da profissão.
+**BLOQUEADOR RESOLVIDO (v2.2)**: A especialista técnica assina diretamente os Relatórios de Sustentabilidade, pois trabalha exclusivamente com informações fornecidas pela empresa — **sem necessidade de RT externo nem ART**. Isso elimina o custo de R$2.000-3.000/mês e simplifica a operação.
+
+> **Nota**: PGRS e GEE não são mais produtos — não exigem RT. São conteúdo informacional/SEO apenas.
 
 | Elemento | Responsável | Onde aparece |
 |---|---|---|
 | **Autor principal** | Fundador(a) — nome, foto, bio, LinkedIn | Byline de todos os artigos |
-| **Revisor técnico** | RT contratado (CRQ/CREA/CRBio conforme tipo) | Badge "Revisado por [Nome], [Registro]" no topo e rodapé |
-| **Credenciais exibidas** | ART do profissional, registro no conselho, formação | Página `/sobre/` + schema ProfessionalService |
+| **Especialista técnica** | Assina os Relatórios de Sustentabilidade | Badge "Elaborado por [Nome], [Formação]" no topo e rodapé |
+| **Credenciais exibidas** | Formação e experiência da especialista | Página `/sobre/` + schema ProfessionalService |
 | **Histórico de atualizações** | Automático via frontmatter MDX | Rodapé dos pilares: "Publicado em X, atualizado em Y" |
-
-**Opções de contratação do RT** (decisão do fundador):
-
-1. **Retainer mensal**: ~R$2.000-3.000/mês (melhor para volume >10 docs/mês)
-2. **Fee por documento**: R$200-500/ART (viável no início com <10 documentos/mês) ← **RECOMENDADO para início**
-3. **Parceria com engenheiro ambiental freelance**: 30% do valor do serviço
 
 ---
 
-## 2. Produtos e Posicionamento
+## 2. Produto e Posicionamento
 
-### Dois Produtos Core
+### Produto Único: Relatório de Sustentabilidade (3 Tiers ESG)
 
-| Produto | O que é | Público | Obrigatoriedade | Regulação base |
+| Plano | Indicadores | Escopo ESG | Público-alvo | Entregável |
 |---|---|---|---|---|
-| **PGRS** | Plano de Gerenciamento de Resíduos Sólidos | PMEs industriais, clínicas, construtoras, comércios | Obrigatório por Lei 12.305/2010 | Lei 12.305/2010 (PNRS), Art. 20-24 |
-| **Relatório de Sustentabilidade** | Relatório ESG com indicadores GRI/IFRS | PMEs fornecedoras de grandes empresas, exportadoras, licitações | Pressão de mercado (supply chain, crédito, licitações) | CVM 193/2023 (efeito cascata), GRI 2021 |
+| **Essencial** | 16 (8A + 5S + 3G) | Diagnóstico simplificado + relatório institucional básico | PMEs iniciantes em ESG, fornecedores começando exigências | Relatório institucional básico, visual padronizada, PDF |
+| **Estruturado** | 29 (12A + 10S + 7G) | GRI adaptado + análise estratégica + melhorias práticas | Diferenciação, parcerias, crédito bancário | Relatório robusto com leitura estratégica, visual personalizada |
+| **Estratégico** | 39+ (Full ESG) | Matriz materialidade + GRI/IFRS + metas + comparativos | Posicionamento corporativo, grandes clientes, exportação | Relatório padrão corporativo, narrativa institucional |
 
-### 🔴 Decisão v2.1 — Inventário de Carbono GEE
+> O RS cobre os **3 pilares ESG**: Ambiental (energia, água, resíduos, emissões), Social (equipe, segurança, diversidade, fornecedores), Governança (LGPD, ética, compliance, riscos). Ver catálogo completo: `docs/INDICADORES_ESG_RS.md`.
 
-> **O Inventário de Carbono GEE NÃO será vendido como produto neste momento.**
+### Decisões v2.1 e v2.2 — PGRS e GEE
+
+> **v2.1 (2026-04-01)**: Inventário de Carbono GEE removido como produto. Motivos: exige consultoria presencial, experiência comprovada, PMEs não demandam. Permanece como conteúdo SEO/awareness.
 >
-> Esta é a mudança mais significativa da v2.1, baseada no feedback direto da especialista técnica.
+> **v2.2 (2026-04-02)**: PGRS também removido como produto. RT eliminado — especialista assina diretamente (trabalha só com dados fornecidos pela empresa). RS é produto único e exclusivo.
 >
-> **Motivos da decisão:**
-> - O inventário GEE é muito caro e complexo — exige consultoria presencial com fornecedores, transportadoras e todos os departamentos da empresa
-> - A especialista precisa de experiência comprovada no mercado para assinar um inventário GEE (diferente do RS)
-> - PMEs não têm interesse nem mão de obra para mobilizar a empresa inteira para um inventário
-> - Quem realiza inventários GEE são empresas grandes (pressão de acionistas, passivos monetários)
-> - A equipe precisa aprender mais com o Gabriel (Techpar/Instituto de Tecnologia do Paraná) antes de oferecer
-> - Estimativa: ~12 meses até estar pronta para oferecer
->
-> **O que fazemos com GEE na v2.1:**
-> - ✅ Se a empresa já tiver dados de emissões (escopo 1 e 2), **incorporamos ao Relatório de Sustentabilidade sem custo adicional**
-> - ✅ Mantemos todo o conteúdo educacional sobre GEE no site para **autoridade SEO e captura de tráfego**
-> - ✅ CTAs do cluster GEE **redirecionam para RS** (não para preços GEE)
-> - ✅ Calculadora de emissões GEE mantida como **PLG tool educacional**
-> - ❌ Sem página de preços para GEE
-> - ❌ Sem oferta de inventário GEE como serviço
-> - 🔜 Produto futuro: pode ser adicionado após aprimoramento da equipe (~12 meses)
+> **O que fazemos com PGRS e GEE:**
+> - Mantemos conteúdo educacional no site para **autoridade SEO e captura de tráfego**
+> - CTAs dos clusters PGRS e GEE **redirecionam para RS**
+> - Calculadora de emissões GEE mantida como **PLG tool educacional**
+> - Se a empresa já tiver dados de emissões (escopo 1/2), **incorporamos ao RS sem custo adicional**
+> - Sem páginas de preços para PGRS ou GEE
 
 ---
 
 ## 3. Modelo de Receita e Precificação
 
-### 3.1 Modelo Híbrido
+### 3.1 Modelo Híbrido (Produto Único — RS em 3 Tiers)
 
 Duas lanes explícitas em toda a comunicação e na página de preços:
 
 **Lane A — Self-Service Online**
 - Cliente preenche questionário guiado na plataforma
-- Documento gerado automaticamente + revisado por RT
-- Checkout online, preço fixo por tier
-- CTA: "Contratar agora", "Gerar meu PGRS"
-- Ideal para: PGRS simples, renovações, PMEs com <50 funcionários
+- Relatório gerado automaticamente + revisado pela especialista
+- Checkout online, preço fixo por plano
+- CTA: "Contratar agora", "Gerar meu Relatório"
+- Ideal para: Planos Essencial e Estruturado
 
 **Lane B — Done-for-You (Consultoria)**
-- Levantamento presencial/remoto por especialista
-- Documento elaborado sob medida + ART
+- Levantamento remoto detalhado por especialista
+- Relatório elaborado sob medida
 - Proposta personalizada via WhatsApp/email
 - CTA: "Fale com especialista", "Solicitar proposta"
-- Ideal para: PGRSS, PGRCC complexos, RS com GRI, casos que exigem levantamento presencial
+- Ideal para: Plano Estratégico, casos complexos com GRI/IFRS, exportadoras
 
-### 3.2 Tabela de Preços (Lane A)
+### 3.2 Tabela de Preços — Scope-Based (v2.2)
 
-| Tier | PGRS | Relatório de Sustentabilidade | Bundle (PGRS+RS) |
+| Plano | Standard (10 dias úteis) | Express (5 dias úteis) | Renovação Anual |
 |---|---|---|---|
-| **Standard** (10 dias úteis) | R$990 | R$1.490 | R$1.990 (-20%) |
-| **Express** (5 dias úteis) | R$1.490 | R$1.990 | R$2.790 (-20%) |
-| **Urgente** (48h) | R$2.490 | R$2.990 | R$4.390 (-20%) |
-| **Renovação Anual** | R$490 | R$790 | R$990 (-23%) |
+| **Essencial** (16 indicadores: 8A+5S+3G) | R$990 | R$1.490 | R$490 |
+| **Estruturado** (29 indicadores: 12A+10S+7G) | R$1.990 | R$2.990 | R$990 |
+| **Estratégico** (39+ indicadores + entregáveis qualitativos) | R$3.990 | R$5.490 | R$1.990 |
 
-> **Nota v2.1**: Inventário GEE **não é oferecido como produto**. Se a empresa já possuir dados de GEE (escopo 1 e 2), eles são incorporados ao Relatório de Sustentabilidade sem custo adicional.
+> **Urgente (48h) removido**: Express (5d) a +50% cobre urgência. Casos especiais via WhatsApp com pricing customizado.
 
 ### 3.3 Estratégia de Ancoragem e Upsell
 
-- Exibir sempre os 3 tiers lado a lado (ancoragem: Urgente faz Standard parecer barato)
-- Destaque visual no tier Express ("Mais Popular")
-- Bundle destacado como "Economize até 20%"
-- Renovação anual mencionada em todo artigo de "renovação PGRS" e no email pós-venda
+- Exibir sempre os 3 planos lado a lado (ancoragem: Estratégico faz Estruturado parecer acessível)
+- Destaque visual no Estruturado ("Mais Popular")
+- Essencial a R$990 = porta de entrada familiar (mesmo preço do antigo PGRS Standard)
+- Estruturado a R$1.990 = salto de 2x (máximo que ainda parece "upgrade")
+- Estratégico a R$3.990 = aspiracional, faz Estruturado parecer razoável
+
+**Upsell paths:**
+1. Essencial → Estruturado: "Adicione indicadores sociais e governança para acessar crédito BACEN e licitações. Upgrade por +R$1.000." (trigger: email de entrega do Essencial)
+2. Estruturado → Estratégico: "Para acesso a grandes clientes, inclua GRI completo e metas. Upgrade por +R$2.000." (trigger: 3 meses após entrega)
+3. Qualquer tier → Renovação: "Renove com dados atualizados." (trigger: 10 meses após entrega)
 
 ### 3.4 Descontos Estratégicos
 
@@ -153,13 +149,13 @@ Duas lanes explícitas em toda a comunicação e na página de preços:
 |---|---|---|
 | Parceiro contador | 5% para o cliente indicado | Indicação via link rastreável |
 | Associação/institucional | 10-15% | FIEMG, FIESP, ACIMINAS, etc. |
-| Segundo serviço | 15% no segundo | Comprar PGRS + RS separado (fora do bundle) |
+| Bundle Multi-Unidade | 20% por unidade (franquias/redes 3+) | R$790/unidade Essencial |
 | Pagamento à vista (PIX) | 5% | Checkout único |
 
 ### 3.5 Receita Recorrente
 
-- Renovação anual obrigatória para PGRS (Lei 12.305, empresas com licenciamento)
-- Update anual de RS (novo período reportado)
+- Update anual de RS (novo período reportado, dados atualizados)
+- Renovação a ~50% do preço inicial incentiva retenção
 - **Meta Mês 12**: 30% da receita vinda de renovações
 
 ---
@@ -232,7 +228,7 @@ Nenhum canal sozinho sustenta o negócio nos primeiros 6 meses. A combinação d
 │
 ├── /pgrs/                                 # PILAR — Guia Completo PGRS
 │   ├── /pgrs/[slug]/                      # Satélites PGRS (14+)
-│   ├── /pgrs/precos/                      # Preços específicos PGRS
+│   ├── ~~~/pgrs/precos/~~~                # REMOVIDO v2.2 — PGRS não é produto
 │   ├── /pgrs/pgrs-cetesb-sao-paulo/       # Estadual SP
 │   ├── /pgrs/pgrs-feam-minas-gerais/      # Estadual MG
 │   ├── /pgrs/pgrs-inea-rio-de-janeiro/    # Estadual RJ
@@ -281,10 +277,10 @@ Nenhum canal sozinho sustenta o negócio nos primeiros 6 meses. A combinação d
 | URL | Função | Conteúdo |
 |---|---|---|
 | `/precos/` | Hub unificado de conversão | Tabela comparativa dos 2 produtos (PGRS + RS), tiers, FAQ de preços, CTA checkout/WhatsApp |
-| `/pgrs/precos/` | Landing específica PGRS | Detalhamento do que inclui cada tier PGRS, comparativo mercado, CTA direto |
+| ~~`/pgrs/precos/`~~ | **REMOVIDO v2.2** | PGRS não é produto — sem página de preços |
 | `/relatorio-sustentabilidade/precos/` | Landing específica RS | Idem para RS |
 | ~~`/inventario-carbono/precos/`~~ | **REMOVIDO v2.1** | GEE não é produto — sem página de preços |
-| `/pgrs/quanto-custa-pgrs/` | Artigo educacional | Fatores de custo, faixas de mercado — SEM tabela de preços própria, linka para `/pgrs/precos/` |
+| `/pgrs/quanto-custa-pgrs/` | Artigo educacional | Fatores de custo, faixas de mercado — SEM tabela de preços própria, informacional (sem preços próprios) |
 
 **Regra**: Artigos "quanto custa" são educacionais sobre fatores/mercado. Páginas `/precos/` são de conversão com preços reais. Nunca duplicar tabela de preços em artigos.
 
@@ -505,7 +501,7 @@ schema: []                   # Tipos de schema: Article, FAQPage, HowTo, Breadcr
 | Posição | Tipo de CTA | Destino | Exemplo |
 |---|---|---|---|
 | Mid-article (após 3o H2) | Contextual, educacional | Pilar do cluster OU ferramenta PLG | "Saiba tudo sobre PGRS no nosso guia completo" |
-| Final do artigo | Conversão direta | `/precos/`, `/[cluster]/precos/` ou WhatsApp | "Gere seu PGRS profissional a partir de R$990" |
+| Final do artigo | Conversão direta | `/precos/`, `/[cluster]/precos/` ou WhatsApp | "Inclua compliance ambiental no seu Relatório de Sustentabilidade → Ver planos" |
 | Sidebar/sticky (desktop) | Lead magnet | Download PDF/checklist (captura email) | "Baixe o checklist PGRS gratuito" |
 | Exit intent (modal) | Newsletter ou lead magnet | Formulário email | "Receba alertas de mudanças regulatórias" |
 
@@ -578,7 +574,7 @@ schema: []                   # Tipos de schema: Article, FAQPage, HowTo, Breadcr
 - H2: Renovação anual: o que muda e quando atualizar
 - H2: Perguntas frequentes sobre PGRS (NÃO usar FAQ schema — pilar)
 
-**CTA final**: "Gere seu PGRS profissional com revisão técnica → Ver preços" (linka `/pgrs/precos/`)
+**CTA final**: "Inclua gestão de resíduos no seu Relatório de Sustentabilidade → Ver planos" (linka `/relatorio-sustentabilidade/precos/`)
 **CTA mid-article**: "Descubra se sua empresa precisa de PGRS com nosso autodiagnóstico gratuito" (linka `/ferramentas/autodiagnostico/`)
 **Regulações**: Lei 12.305/2010 Art. 20-24, Decreto 10.936/2022, Lei 9.605/1998, NBR 10004:2004
 **Schema**: Article + BreadcrumbList + HowTo
@@ -687,7 +683,7 @@ schema: []                   # Tipos de schema: Article, FAQPage, HowTo, Breadcr
 | **Prazo** | Mês 2, Semana 1 |
 
 **Estrutura H2s**: Faixas de preço no mercado → 6 fatores de custo → Plataforma vs. consultoria vs. freelance → Como economizar → O custo de NÃO ter PGRS
-**CTA final**: "Veja nossos preços transparentes para PGRS" → `/pgrs/precos/`
+**CTA final**: "Inclua compliance de resíduos no seu Relatório de Sustentabilidade → Ver planos" → `/relatorio-sustentabilidade/precos/`
 **Schema**: Article + BreadcrumbList + FAQPage (5 perguntas sobre preços)
 
 ---
@@ -705,7 +701,7 @@ schema: []                   # Tipos de schema: Article, FAQPage, HowTo, Breadcr
 | **Prazo** | Mês 2, Semana 2 |
 
 **Estrutura H2s**: O que é PGRSS → RDC ANVISA 222/2018 → Classificação Grupos A-E → CONAMA 358/2005 → Passo a passo → Quem pode assinar (RT)
-**CTA final**: "Gere seu PGRSS profissional com revisão por RT habilitado → Ver preços" → `/pgrs/precos/`
+**CTA final**: "Inclua compliance de resíduos de saúde no seu Relatório de Sustentabilidade → Ver planos" → `/relatorio-sustentabilidade/precos/`
 **Schema**: Article + BreadcrumbList + FAQPage
 
 ---
@@ -777,7 +773,7 @@ schema: []                   # Tipos de schema: Article, FAQPage, HowTo, Breadcr
 | **Diferencial** | ÚNICO conteúdo que consolida TODAS as alterações da CONAMA 307: original 2002 + 348/2004 + 431/2011 + 448/2012 + 469/2015 |
 | **Prazo** | Mês 3, Semana 1 |
 
-**CTA final**: "Gere seu PGRCC com revisão técnica → Ver preços" → `/pgrs/precos/`
+**CTA final**: "Inclua compliance de construção no seu Relatório de Sustentabilidade → Ver planos" → `/relatorio-sustentabilidade/precos/`
 
 ---
 
@@ -825,7 +821,7 @@ schema: []                   # Tipos de schema: Article, FAQPage, HowTo, Breadcr
 | **Diferencial** | Único guia 100% focado em CETESB com links diretos para formulários e limiares de SP |
 | **Prazo** | Mês 3, Semana 4 |
 
-**CTA final**: "Gere seu PGRS para SP com revisão técnica → Ver preços" → `/pgrs/precos/`
+**CTA final**: "Inclua compliance ambiental de SP no seu Relatório de Sustentabilidade → Ver planos" → `/relatorio-sustentabilidade/precos/`
 **Justificativa**: SP é o maior mercado. Conteúdo estadual captura busca local de alta intenção.
 
 ---
@@ -1600,7 +1596,7 @@ Content update (push MDX) → GitHub Actions → next build → firebase deploy 
 
 A Paloma é uma plataforma B2B de compliance ambiental para PMEs brasileiras com:
 - **2 produtos** (PGRS + Relatório de Sustentabilidade) — GEE removido como produto, mantido para SEO
-- **Modelo híbrido** (self-service + done-for-you) com revisão por RT habilitado
+- **Modelo híbrido** (self-service + done-for-you) com revisão por especialista qualificada
 - **7 canais** de aquisição desde o Dia 1 — não depende apenas de SEO
 - **51+ peças** de conteúdo em 12 meses (126.000 palavras)
 - **3 PLG tools** para captura automatizada de leads
