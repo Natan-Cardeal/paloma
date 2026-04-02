@@ -70,14 +70,23 @@ Duas lanes explicitas em toda a comunicacao e na pagina de precos:
 
 | Plano | Escopo | Indicadores | Publico-alvo | Entregavel |
 |---|---|---|---|---|
-| **Essencial** (Basico) | Diagnostico simplificado + relatorio institucional basico | 8-12 basicos (residuos, consumo, equipe, governanca) | PMEs iniciantes em ESG, fornecedores comecando exigencias | Relatorio institucional basico, identidade visual padronizada, PDF |
-| **Estruturado** (Intermediario) | Indicadores relevantes + analise estrategica + melhorias | 15-25 ESG, base GRI adaptado PME, pilares A/S/G | Empresas buscando diferenciacao e parcerias | Relatorio robusto com leitura estrategica, visual personalizada |
-| **Estrategico** (Avancado) | Matriz materialidade + GRI/IFRS + metas + comparativos | GRI completo + IFRS S1/S2 adaptado, indicadores comparativos | Empresas buscando posicionamento corporativo, acesso a grandes clientes | Relatorio padrao corporativo, narrativa institucional, pode incluir dados de emissoes |
+| **Essencial** (Basico) | Diagnostico simplificado + relatorio institucional basico | **16 indicadores**: 8A + 5S + 3G (energia, agua, residuos, emissoes, quadro funcional, acidentes, treinamento, genero, gestao, LGPD, regularidade) | PMEs iniciantes em ESG, fornecedores comecando exigencias | Relatorio institucional basico, identidade visual padronizada, PDF |
+| **Estruturado** (Intermediario) | Indicadores relevantes + analise estrategica + melhorias | **29 indicadores**: 12A + 10S + 7G (Essencial + intensidade energetica/hidrica, gap salarial, PCD, NPS, avaliacao fornecedores, codigo etica, riscos ESG, canal denuncias, anticorrupcao) | Empresas buscando diferenciacao e parcerias | Relatorio robusto com leitura estrategica, visual personalizada |
+| **Estrategico** (Avancado) | Matriz dupla materialidade + GRI/IFRS + metas + comparativos | **39+ indicadores**: Full E + 15S + 12G (Estruturado + diversidade etnica, comunidade, absenteismo, due diligence DDHH, responsavel ESG, stakeholders, compliance, remuneracao ESG) + GRI Content Index + IFRS S1/S2 + SASB | Posicionamento corporativo, grandes clientes | Relatorio padrao corporativo, narrativa institucional, metas com baseline |
+
+**Pricing Scope-Based (v2.3)**:
+
+| Plano | Standard (10 dias uteis) | Express (5 dias uteis) | Renovacao Anual |
+|---|---|---|---|
+| **Essencial** (16 indicadores) | R$990 | R$1.490 | R$490 |
+| **Estruturado** (29 indicadores) | R$1.990 | R$2.990 | R$990 |
+| **Estrategico** (39+ indicadores + entregaveis qualitativos) | R$3.990 | R$5.490 | R$1.990 |
 
 **Estrategia de Precificacao**:
-- **Essencial**: porta de entrada acessivel (PMEs que nunca fizeram RS)
-- **Estruturado**: plano mais popular (preco intermediario, maior volume)
-- **Estrategico**: ancoragem de valor e posicionamento premium
+- **Essencial** (R$990): porta de entrada acessivel. Preco familiar (equivalente ao antigo PGRS Standard). Captura first-time buyers.
+- **Estruturado** (R$1.990): plano mais popular. Salto de 2x do Essencial — maximo que ainda parece "upgrade" e nao "outro produto".
+- **Estrategico** (R$3.990): ancoragem premium. Faz o Estruturado parecer razoavel. Cobre 15-20h de trabalho da especialista.
+- **Urgente (48h) removido**: Express (5d) a +50% cobre urgencia. Casos especiais via WhatsApp com pricing customizado.
 
 > **Nota**: PGRS e GEE nao sao oferecidos como produtos. Conteudo SEO sobre PGRS e GEE permanece para topical authority e direciona trafego para RS. Se a empresa ja possuir dados de GEE (escopo 1 e 2), serao incorporados ao RS do plano Estrategico sem custo adicional.
 
@@ -331,14 +340,28 @@ Sitemap: https://[dominio]/sitemap.xml
 | R4 | Relatorio de Sustentabilidade e Credito Bancario: BACEN 4.945 e PRSAC | relatorio sustentabilidade credito banco | Transacional | Diretor financeiro buscando credito | Conexao direta: RS → melhor score de credito | 2.000 | BACEN Res. 4.945/2021 (PRSAC), TCFD |
 | R5 | Relatorio Sustentabilidade para Fornecedores de Grandes Empresas | relatorio sustentabilidade fornecedor | Transacional | PME fornecedora, gestor de contratos | Supply chain compliance — o que o contratante pede | 2.000 | GRI, SASB, requisitos contratuais |
 | R6 | Relatorio de Sustentabilidade e Licitacoes Publicas | relatorio sustentabilidade licitacao | Transacional | Empresa que participa de licitacoes | Vantagem competitiva em licitacoes com criterio ESG | 1.800 | Lei 14.133/2021 (nova lei de licitacoes) |
-| R7 | ESG para Empresas com Menos de 50 Funcionarios: O que Faz Sentido | esg empresa pequena 50 funcionarios | Informacional | Micro e pequeno empresario | Abordagem realista: o que vale a pena vs. overhead | 2.000 | — |
+| R7 | ESG para Empresas com Menos de 50 Funcionarios: O que Faz Sentido | esg empresa pequena 50 funcionarios | Informacional | Micro e pequeno empresario | **v2.3 REESCRITO**: Abordagem realista com peso igual a indicadores A/S/G na escala micro — quais 8-10 indicadores fazem sentido para <50 func | 2.000 | CLT, NR-1 |
 | R8 | Relatorio Sustentabilidade para Agronegocio Exportador | relatorio sustentabilidade agronegocio | Transacional | Produtor rural, cooperativa | Exigencias de importadores EU/US + EUDR | 2.200 | GRI, EUDR (EU Deforestation Regulation) |
 | R9 | Relatorio Sustentabilidade para Construtoras e Incorporadoras | relatorio sustentabilidade construcao | Transacional | Construtora, incorporadora | Certificacoes + relatorio integrado | 2.000 | GRI, LEED, AQUA-HQE |
-| R10 | Indicadores ESG para PMEs: Quais Medir e Como Reportar | indicadores esg pme | Informacional | Gestor que nao sabe por onde comecar | Lista curada de 15-20 indicadores realmente relevantes para PMEs | 2.200 | GRI, SASB, ODS |
+| R10 | Indicadores ESG para PMEs: Quais Medir e Como Reportar | indicadores esg pme | Informacional | Gestor que nao sabe por onde comecar | **v2.3 REESCRITO**: Catalogo definitivo 16-29 indicadores por tier (Essencial/Estruturado/Estrategico), organizados por E/S/G com metodos de coleta. Referencia `INDICADORES_ESG_RS.md` | 2.500 | GRI 2/3/200-400, CLT, LGPD, Lei 12.846 |
 | R11 | Quanto Custa um Relatorio de Sustentabilidade em 2025 | quanto custa relatorio sustentabilidade | Transacional | Diretor financeiro | Comparativo mercado, sem tabela propria | 1.800 | — |
 | R12 | Relatorio de Sustentabilidade para Franqueados e Redes | relatorio sustentabilidade franquia | Transacional | Franqueador, franqueado | Modelo padronizado para redes | 1.800 | GRI |
-| R13 | Matriz de Materialidade ESG: Como Fazer para PMEs | matriz materialidade esg pme | Informacional | Gestor ESG, consultor | Metodologia simplificada com template baixavel | 2.200 | GRI 3: Material Topics 2021 |
+| R13 | Matriz de Materialidade ESG: Como Fazer para PMEs | matriz materialidade esg pme | Informacional | Gestor ESG, consultor | **v2.3 EXPANDIDO**: Metodologia simplificada com template + identificacao explicita de topicos S/G, matrizes exemplo para 3 setores (industria, servicos, agro) | 2.500 | GRI 3: Material Topics 2021 |
 | R14 | Relatorio de Sustentabilidade para Startups: O que Investidores Exigem | relatorio sustentabilidade startup investidor | Informacional/Transacional | Fundador de startup, CFO | Foco em o que VCs e investidores realmente pedem | 2.000 | SASB, TCFD, requisitos de investidores |
+
+#### Satelites v2.3 — Pilar Social
+
+| # | Titulo | Keyword principal | Intent | Persona primaria | Diferencial competitivo | Volume (palavras) | Regulacoes obrigatorias |
+|---|---|---|---|---|---|---|---|
+| R15 | Indicadores Sociais no Relatorio de Sustentabilidade: CLT, Seguranca e Diversidade para PMEs | indicadores sociais relatorio sustentabilidade pme | Informacional | RH, gestor ESG | Unico conteudo que mapeia indicadores sociais especificos para RS de PMEs com fontes de dados (eSocial, CAT, folha) | 2.200 | CLT, NR-1, NR-7, Lei 14.611/2023, Lei 14.457/2022, Lei 8.213/1991 Art.93 |
+| R18 | Avaliacao Social da Cadeia de Fornecedores: Guia Pratico para PMEs | avaliacao social cadeia fornecedores pme | Informacional/Transacional | Gestor de compras, compliance | Metodologia simplificada: checklist de 10 itens + due diligence para PMEs sem departamento de compliance | 2.000 | GRI 414, Lei 12.846/2013 |
+
+#### Satelites v2.3 — Pilar Governanca
+
+| # | Titulo | Keyword principal | Intent | Persona primaria | Diferencial competitivo | Volume (palavras) | Regulacoes obrigatorias |
+|---|---|---|---|---|---|---|---|
+| R16 | LGPD no Relatorio de Sustentabilidade: Governanca de Dados como Indicador ESG | lgpd relatorio sustentabilidade governanca | Informacional/Transacional | DPO, gestor TI, compliance | Unico conteudo que conecta LGPD a indicadores de governanca no RS — como reportar status de protecao de dados | 2.000 | Lei 13.709/2018 (LGPD), GRI 418-1 |
+| R17 | Governanca Corporativa para PMEs: Etica, Compliance e Gestao de Riscos no RS | governanca corporativa pme relatorio sustentabilidade | Informacional | Socio, diretor, gestor compliance | Desmistifica governanca para PMEs: nao e conselho de administracao, e ter processos. Codigo de etica, canal de denuncias, mapa de riscos | 2.200 | Lei 12.846/2013, Decreto 11.129/2022, Lei 14.457/2022 |
 
 ### 3.4 Conteudo Cross-Cluster (`/blog/`)
 
@@ -350,11 +373,13 @@ Artigos TOFU e de awareness que nao pertencem a um cluster especifico, mas linka
 | B2 | 5 Multas Ambientais que PMEs Recebem Sem Saber | multa ambiental pme | TOFU/Awareness | Blog | M4 |
 | B3 | Sustentabilidade Empresarial: Modismo ou Obrigacao Legal? | sustentabilidade empresarial obrigacao | TOFU/Awareness | Blog | M4 |
 | B4 | Seu Contador Deveria Ter Te Avisado Sobre Isso (Compliance Ambiental) | compliance ambiental contador | TOFU/Awareness | Blog | M5 |
-| B5 | Economia Circular para PMEs: Oportunidades e Primeiros Passos | economia circular pme | TOFU/Awareness | Blog | M5 |
-| B6 | Selos Verdes para Empresas Brasileiras: Quais Existem e Como Obter | selos verdes empresas brasil | TOFU/Awareness | Blog | M6 |
+| B5 | Economia Circular para PMEs: Oportunidades e Primeiros Passos | economia circular pme | TOFU/Awareness | Blog | ~~M5~~ **M7** (deslocado v2.3) |
+| B6 | Selos Verdes para Empresas Brasileiras: Quais Existem e Como Obter | selos verdes empresas brasil | TOFU/Awareness | Blog | ~~M6~~ **M8** (deslocado v2.3) |
 | B7 | Plataforma de Compliance Ambiental vs. Consultoria Tradicional: Comparativo | plataforma compliance vs consultoria | MOFU/Comparativo | Blog | M3 |
 | B8 | Contadores e Compliance Ambiental: Uma Parceria Necessaria | contador compliance ambiental parceria | MOFU/Parceria | Blog | M3 |
 | B9 | Calendario Regulatorio Ambiental 2025: Todas as Datas que Sua Empresa Precisa Saber | calendario regulatorio ambiental 2025 | Informacional | Blog | M3 (bonus) |
+| B10 | 5 Riscos Trabalhistas e de Dados que PMEs Ignoram (e Como o RS Ajuda) | riscos trabalhistas dados pme | TOFU/Awareness S/G | Blog | **M4** (v2.3 — par com B2 multas ambientais) |
+| B11 | Governanca para PMEs: Nao e Sobre Ter Conselho, e Sobre Ter Processo | governanca pme processo | TOFU/Awareness G | Blog | **M5** (v2.3) |
 
 ---
 
@@ -526,13 +551,16 @@ schema: []                   # Tipos de schema: Article, FAQPage, HowTo, Breadcr
 **Meta-description sugerida**: Como criar um relatorio de sustentabilidade para PMEs em 2025. Framework simplificado, indicadores essenciais e como usar para credito, licitacoes e supply chain (max 920px)
 **Estrutura H2s**:
 - H2: O que e um relatorio de sustentabilidade e por que PMEs estao sendo cobradas
+- H2: Os 3 pilares ESG: Ambiental, Social e Governanca — o que cada um cobre
 - H2: CVM 193/2023: quem e obrigado por lei vs. quem e impactado pelo efeito cascata
 - H2: Frameworks disponiveis: GRI, SASB, IFRS S1/S2 — qual usar para PMEs
-- H2: Framework simplificado: 15 indicadores essenciais para sua primeira versao
+- H2: 16 indicadores essenciais para sua primeira versao (8 Ambiental + 5 Social + 3 Governanca)
+- H2: Indicadores Sociais: CLT, seguranca do trabalho, diversidade e fornecedores
+- H2: Indicadores de Governanca: LGPD, etica, riscos e compliance
 - H2: Passo a passo para elaborar seu relatorio (6 etapas)
+- H2: Nossos 3 planos: Essencial, Estruturado e Estrategico — qual e para voce
 - H2: Matriz de materialidade: como identificar o que importa para seu negocio
 - H2: Como usar seu relatorio para conseguir credito bancario (BACEN 4.945)
-- H2: Relatorio de sustentabilidade em licitacoes publicas (Lei 14.133/2021)
 - H2: Quanto custa e como escolher entre plataforma e consultoria
 **CTA primario (final)**: "Crie seu relatorio de sustentabilidade profissional → Ver precos" (linka `/relatorio-sustentabilidade/precos/`)
 **CTA mid-article**: "Veja como funciona nossa plataforma de geracao de relatorios" (linka para demo/video ou pilar)
