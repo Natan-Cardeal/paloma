@@ -1,6 +1,6 @@
 # PLANO DE CONTEUDO SEO v2.0 — Plataforma de Sustentabilidade para PMEs
 
-**Versao**: 2.0 | **Data**: 2026-03-30 | **Horizonte**: 12 meses | **Status**: Reescrita completa pos-revisao cascateada (6 especialistas)
+**Versao**: 2.1 | **Data**: 2026-04-01 | **Horizonte**: 12 meses | **Status**: v2.0 ajustada com feedback da especialista (remocao de Inventario GEE como produto)
 **Hosting**: Firebase Hosting | **Stack**: Next.js 15 App Router + MDX + SSG + Cloud Functions
 **Cadencia**: 5 pecas/mes (M1-M3) → 4 pecas/mes (M4-M12) | **Total**: 51 pecas em 12 meses
 
@@ -10,9 +10,12 @@
 
 ### 1.1 Posicionamento
 
-Plataforma B2B de compliance ambiental para PMEs brasileiras. Tres produtos core — PGRS, Inventario de Carbono GEE, Relatorio de Sustentabilidade — entregues via modelo hibrido (self-service online + done-for-you para casos complexos).
+Plataforma B2B de compliance ambiental para PMEs brasileiras. Dois produtos core — **PGRS** e **Relatorio de Sustentabilidade** — entregues via modelo hibrido (self-service online + done-for-you para casos complexos).
 
-**Diferencial competitivo**: Unica plataforma que combina geracao automatizada de documentos com revisao por Responsavel Tecnico habilitado (ART assinada), a precos acessiveis para PMEs.
+> **Nota v2.1 — Inventario de Carbono GEE removido como produto**
+> Feedback da especialista tecnica (2026-04-01): Inventario GEE exige experiencia comprovada para assinatura, consultoria presencial com fornecedores/transportadoras/todos os setores da empresa, e PMEs nao tem interesse nem mao de obra para isso. O publico-alvo (PMEs) nao demanda esse servico — quem faz sao empresas grandes. GEE sera **mencionado como contexto** nos relatorios de sustentabilidade (se a empresa ja tiver dados de escopo 1 e 2), mas **nao vendido como produto** neste momento. Podera se tornar produto futuro (~12 meses) apos aprimoramento tecnico da equipe.
+
+**Diferencial competitivo**: Unica plataforma que combina geracao automatizada de documentos (PGRS + RS) com revisao por Responsavel Tecnico habilitado (ART assinada), a precos acessiveis para PMEs.
 
 ### 1.2 Os 4 Pilares Estrategicos
 
@@ -25,7 +28,7 @@ Plataforma B2B de compliance ambiental para PMEs brasileiras. Tres produtos core
 
 ### 1.3 E-E-A-T Corrigido
 
-**BLOQUEADOR RESOLVIDO**: Todo conteudo tecnico (PGRS, GEE, RS) exige Responsavel Tecnico (RT) habilitado com ART. Sem RT, a plataforma configura exercicio ilegal da profissao.
+**BLOQUEADOR RESOLVIDO**: Todo conteudo tecnico (PGRS, RS) exige Responsavel Tecnico (RT) habilitado com ART. Sem RT, a plataforma configura exercicio ilegal da profissao. (GEE nao e produto — nao exige RT neste momento.)
 
 **Modelo de autoria**:
 
@@ -57,16 +60,18 @@ Duas lanes explicitas em toda a comunicacao e na pagina de precos:
 - Documento elaborado sob medida + ART
 - Proposta personalizada via WhatsApp/email
 - CTA: "Fale com especialista", "Solicitar proposta"
-- Ideal para: PGRSS, PGRCC complexos, inventarios GEE com multiplas unidades, RS com GRI
+- Ideal para: PGRSS, PGRCC complexos, RS com GRI, casos que exigem levantamento presencial
 
 **Pricing Tiered (Lane A)**:
 
-| Tier | PGRS | GEE | RS | Bundle Completo |
-|---|---|---|---|---|
-| Standard (10 dias uteis) | R$990 | R$1.290 | R$1.490 | R$2.990 |
-| Express (5 dias uteis) | R$1.490 | R$1.790 | R$1.990 | R$4.290 |
-| Urgente (48h) | R$2.490 | R$2.990 | R$2.990 | R$6.990 |
-| Renovacao anual | R$490 | R$690 | R$790 | R$1.490 |
+| Tier | PGRS | RS | Bundle (PGRS+RS) |
+|---|---|---|---|
+| Standard (10 dias uteis) | R$990 | R$1.490 | R$1.990 (-20%) |
+| Express (5 dias uteis) | R$1.490 | R$1.990 | R$2.790 (-20%) |
+| Urgente (48h) | R$2.490 | R$2.990 | R$4.390 (-20%) |
+| Renovacao anual | R$490 | R$790 | R$990 (-23%) |
+
+> **Nota**: Inventario GEE nao e oferecido como produto. Se a empresa ja possuir dados de GEE (escopo 1 e 2), eles serao incorporados ao Relatorio de Sustentabilidade sem custo adicional.
 
 ### 1.5 Go-to-Market Multi-Canal
 
@@ -108,9 +113,8 @@ Duas lanes explicitas em toda a comunicacao e na pagina de precos:
 │   ├── /pgrs/pgrs-fepam-rs/              # Estadual RS
 │   └── /pgrs/pgrs-iat-parana/            # Estadual PR
 │
-├── /inventario-carbono/                   # PILAR — Guia Completo GEE
-│   ├── /inventario-carbono/[slug]/        # Satelites GEE (12+)
-│   └── /inventario-carbono/precos/        # Precos especificos GEE
+├── /inventario-carbono/                   # PILAR — Guia Completo GEE (INFORMACIONAL — nao e produto)
+│   └── /inventario-carbono/[slug]/        # Satelites GEE (informacional/awareness, sem pagina de precos)
 │
 ├── /relatorio-sustentabilidade/           # PILAR — Guia Completo RS
 │   ├── /relatorio-sustentabilidade/[slug]/ # Satelites RS (12+)
@@ -152,10 +156,10 @@ Duas lanes explicitas em toda a comunicacao e na pagina de precos:
 
 | URL | Funcao | Conteudo |
 |---|---|---|
-| `/precos/` | Hub unificado de conversao | Tabela comparativa dos 3 produtos, tiers, FAQ de precos, CTA checkout/WhatsApp |
+| `/precos/` | Hub unificado de conversao | Tabela comparativa dos 2 produtos (PGRS + RS), tiers, FAQ de precos, CTA checkout/WhatsApp |
 | `/pgrs/precos/` | Landing especifica PGRS | Detalhamento do que inclui cada tier PGRS, comparativo mercado, CTA direto |
-| `/inventario-carbono/precos/` | Landing especifica GEE | Idem para GEE |
 | `/relatorio-sustentabilidade/precos/` | Landing especifica RS | Idem para RS |
+| ~~`/inventario-carbono/precos/`~~ | **REMOVIDO v2.1** | GEE nao e produto — sem pagina de precos |
 | `/pgrs/quanto-custa-pgrs/` | Artigo educacional | Fatores de custo, faixas de mercado, comparacoes — SEM tabela de precos propria, linka para `/pgrs/precos/` |
 
 **Regra**: Artigos "quanto custa" sao educacionais sobre fatores/mercado. Paginas `/precos/` sao de conversao com precos reais. Nunca duplicar tabela de precos em artigos.
@@ -163,7 +167,7 @@ Duas lanes explicitas em toda a comunicacao e na pagina de precos:
 ### 2.3 Hierarquia de Linkagem entre Diretorios
 
 ```
-/pgrs/ ←→ /inventario-carbono/ ←→ /relatorio-sustentabilidade/
+/pgrs/ ←→ /inventario-carbono/ (informacional) ←→ /relatorio-sustentabilidade/
    ↓              ↓                        ↓
 /setoriais/ (bidirecional — setorial cita cluster, cluster cita setorial)
    ↓
@@ -268,7 +272,9 @@ Sitemap: https://[dominio]/sitemap.xml
 | PE4 | PGRS FEPAM Rio Grande do Sul: Guia de Adequacao | pgrs fepam rs | Transacional | Foco FEPAM | Portarias FEPAM aplicaveis | M8 |
 | PE5 | PGRS IAT Parana: Requisitos Especificos | pgrs iat parana | Transacional | Foco IAT (ex-IAP) | Resolucoes SEMA/PR | M10 |
 
-### 3.2 Cluster GEE (Inventario de Carbono)
+### 3.2 Cluster GEE (Inventario de Carbono) — INFORMACIONAL / AWARENESS
+
+> **v2.1**: Este cluster existe para **topical authority e SEO**, nao para vender inventarios GEE como produto. O conteudo educa o mercado, gera trafego e direciona leitores para o Relatorio de Sustentabilidade (onde dados GEE existentes podem ser incorporados). CTAs de precos GEE foram removidos — CTAs redirecionam para `/relatorio-sustentabilidade/precos/` ou `/precos/`.
 
 **Pilar**: "Inventario de Carbono GEE 2025: Guia Completo para Empresas Brasileiras"
 **URL**: `/inventario-carbono/`
@@ -276,6 +282,7 @@ Sitemap: https://[dominio]/sitemap.xml
 **Volume target**: 4.000-5.000 palavras
 **Schema**: Article + BreadcrumbList + HowTo
 **Atualizacao**: Semestral
+**Papel no funil**: TOFU/MOFU — awareness e autoridade. Nao e BOFU/conversao direta.
 
 #### Satelites do Cluster GEE
 
@@ -291,7 +298,7 @@ Sitemap: https://[dominio]/sitemap.xml
 | G8 | Inventario de Carbono para Eventos Corporativos | inventario carbono eventos | Transacional | Produtor de eventos, agencia | Nicho em crescimento (ESG + marketing) | 1.800 | GHG Protocol for Events |
 | G9 | Inventario GEE para Construtoras: LEED e AQUA | inventario carbono construcao leed | Transacional | Construtora buscando certificacao verde | Integracao GEE + certificacoes verdes | 2.000 | GHG Protocol, LEED v4.1, AQUA-HQE |
 | G10 | Fatores de Emissao MCTI 2025: Tabela Atualizada e Como Usar | fatores emissao mcti 2025 | Informacional | Tecnico ambiental, consultor | Tabela atualizada com fonte oficial MCTI | 2.000 | MCTI (Ministerio da Ciencia, Tecnologia e Inovacao) |
-| G11 | Quanto Custa um Inventario de Carbono GEE em 2025 | quanto custa inventario carbono | Transacional | Diretor financeiro, gestor | Comparativo mercado, sem tabela propria (linka para precos) | 1.800 | — |
+| G11 | Quanto Custa um Inventario de Carbono GEE em 2025 | quanto custa inventario carbono | Informacional | Diretor financeiro, gestor | Comparativo mercado, educacional (nao vendemos GEE — redireciona para RS se aplicavel) | 1.800 | — |
 | G12 | Certificacao Carbono Neutro: Como Obter o Selo | certificacao carbono neutro selo | Informacional/Transacional | Diretor de marketing, gestor ESG | Passo a passo certificacao + custos reais | 2.000 | PAS 2060, normas de mercado voluntario |
 | G13 | GHG Protocol vs ISO 14064: Qual Metodologia Usar | ghg protocol vs iso 14064 | Informacional | Consultor, analista ambiental | Comparativo tecnico com recomendacao por cenario | 1.800 | GHG Protocol, ISO 14064-1:2018 |
 | G14 | CBAM para Exportadores Brasileiros: O que Fazer em 2025 | cbam exportadores brasileiros | Informacional/Urgencia | Exportador, diretor de comercio exterior | Urgencia real: regulacao EU em fase transitoria | 2.200 | CBAM (EU Regulation 2023/956), GHG Protocol |
@@ -456,7 +463,7 @@ schema: []                   # Tipos de schema: Article, FAQPage, HowTo, Breadcr
 - H2: Por que PMEs abaixo do limiar tambem serao impactadas (Escopo 3)
 - H2: Status da regulamentacao: o que ja esta definido e o que falta
 - H2: Como sua empresa pode se preparar agora (3 passos praticos)
-**CTA primario (final)**: "Prepare seu inventario de carbono antes da regulamentacao → Ver precos" (linka `/inventario-carbono/precos/`)
+**CTA primario (final)**: "Inclua dados de emissoes no seu Relatorio de Sustentabilidade → Ver precos RS" (linka `/relatorio-sustentabilidade/precos/`)
 **CTA mid-article**: "Entenda tudo sobre inventarios GEE no nosso guia completo" (linka `/inventario-carbono/`)
 **Regulacoes obrigatorias**: Lei 15.042/2024, Acordo de Paris (NDC brasileira), GHG Protocol
 **Disclaimer obrigatorio**: "A Lei 15.042/2024 foi sancionada em [data], porem o decreto regulamentador com detalhes de fases, prazos e limiares especificos ainda nao foi publicado. As informacoes neste artigo refletem o texto da lei e podem ser atualizadas quando a regulamentacao for emitida."
@@ -527,13 +534,15 @@ schema: []                   # Tipos de schema: Article, FAQPage, HowTo, Breadcr
 
 ---
 
-#### M1-S4: PILAR Inventario de Carbono GEE
+#### M1-S4: PILAR Inventario de Carbono GEE (INFORMACIONAL — nao e produto)
+
+> **v2.1**: Este pilar e puramente educacional/SEO. Nao vendemos inventario GEE como servico. O conteudo serve para: (1) topical authority, (2) captar trafego de alta qualidade, (3) direcionar para RS quando a empresa tiver dados GEE.
 
 **Titulo**: Inventario de Carbono GEE 2025: Guia Completo para Empresas Brasileiras
 **URL**: `/inventario-carbono/`
 **Keyword principal**: inventario de carbono empresa
 **Keywords secundarias**: inventario gee empresa, como fazer inventario carbono, inventario emissoes gases efeito estufa, inventario carbono 2025
-**Intencao de busca**: Informacional com intencao transacional crescente
+**Intencao de busca**: Informacional (awareness — sem conversao direta para produto GEE)
 **Persona primaria**: Gestor ambiental ou de compliance em empresa media (100-500 funcionarios) que precisa reportar emissoes para cliente grande (Escopo 3) ou esta se antecipando ao SBCE
 **Diferencial vs. concorrentes**: Unico guia que: (1) cobre contexto brasileiro especifico (fatores MCTI, Programa GHG Protocol Brasil), (2) distingue obrigacao legal SBCE (>10.000 tCO2e) de motivacao voluntaria, (3) inclui passo a passo com planilha de exemplo
 **Volume**: 4.000-5.000 palavras
@@ -548,13 +557,13 @@ schema: []                   # Tipos de schema: Article, FAQPage, HowTo, Breadcr
 - H2: Verificacao e publicacao: Programa GHG Protocol Brasil e Registro Publico
 - H2: Quanto custa e como escolher entre plataforma e consultoria
 - H2: SBCE e o futuro do mercado de carbono brasileiro
-**CTA primario (final)**: "Elabore seu inventario de carbono profissional → Ver precos" (linka `/inventario-carbono/precos/`)
+**CTA primario (final)**: "Ja tem dados de emissoes? Inclua no seu Relatorio de Sustentabilidade → Ver precos RS" (linka `/relatorio-sustentabilidade/precos/`)
 **CTA mid-article**: "Calcule suas emissoes gratuitamente com nossa calculadora" (linka `/ferramentas/calculadora-emissoes/`)
 **Regulacoes obrigatorias**: Lei 15.042/2024 (SBCE), GHG Protocol Corporate Standard, ISO 14064-1:2018, fatores MCTI
 **Schema**: Article + BreadcrumbList + HowTo
 **Historico de atualizacoes**: Bloco visivel no rodape
 **Prazo publicacao**: Mes 1, Semana 4
-**Justificativa**: Este pilar estava COMPLETAMENTE AUSENTE do plano original. Satelites GEE estavam sendo publicados sem hub page — quebra a arquitetura de topic cluster.
+**Justificativa**: Este pilar serve para topical authority e captura de trafego. Nao vendemos GEE como produto, mas o conteudo gera autoridade e direciona para RS.
 
 ---
 
@@ -653,7 +662,7 @@ schema: []                   # Tipos de schema: Article, FAQPage, HowTo, Breadcr
 - H2: Cronograma: fase transitoria (2023-2025) e fase definitiva (2026+)
 - H2: O que exportadores brasileiros precisam reportar
 - H2: Como um inventario de carbono GEE prepara sua empresa para o CBAM
-**CTA primario (final)**: "Prepare seu inventario GEE para compliance CBAM → Ver precos" (linka `/inventario-carbono/precos/`)
+**CTA primario (final)**: "Documente suas emissoes no seu Relatorio de Sustentabilidade → Ver precos RS" (linka `/relatorio-sustentabilidade/precos/`)
 **CTA mid-article**: "Entenda escopos 1, 2 e 3 no nosso guia completo de GEE" (linka `/inventario-carbono/`)
 **Regulacoes obrigatorias**: CBAM (EU Regulation 2023/956), GHG Protocol, Lei 15.042/2024 (SBCE)
 **Schema**: Article + BreadcrumbList + FAQPage (5 perguntas)
@@ -696,7 +705,7 @@ schema: []                   # Tipos de schema: Article, FAQPage, HowTo, Breadcr
 - Fatores de emissao MCTI embutidos
 - Resultado: estimativa tCO2e/ano por escopo
 - Captura: email obrigatorio para baixar PDF com resultado detalhado
-- Upsell: "Para um inventario completo com verificacao, a partir de R$1.290"
+- Upsell: "Inclua esses dados de emissoes no seu Relatorio de Sustentabilidade profissional, a partir de R$1.490"
 **Schema**: WebApplication + BreadcrumbList
 **Implementacao**: SSG shell + client-side (React, calculos no browser, sem API)
 **Prazo**: Mes 2, Semana 3-4
@@ -746,7 +755,7 @@ schema: []                   # Tipos de schema: Article, FAQPage, HowTo, Breadcr
 **Persona primaria**: Gestor que ja sabe que precisa de PGRS/GEE/RS e esta decidindo COMO resolver — plataforma ou consultoria
 **Diferencial vs. concorrentes**: Comparativo honesto com pros e contras reais de cada abordagem. NAO e propaganda disfarçada — reconhece quando consultoria e melhor opcao (casos complexos, multinacionais, certificacao ISO).
 **Volume**: 2.200 palavras
-**Meta-description sugerida**: Plataforma online ou consultoria presencial para PGRS, inventario GEE e relatorio de sustentabilidade? Comparativo honesto com precos, prazos e quando usar cada opcao (max 920px)
+**Meta-description sugerida**: Plataforma online ou consultoria presencial para PGRS e relatorio de sustentabilidade? Comparativo honesto com precos, prazos e quando usar cada opcao (max 920px)
 **Estrutura H2s**:
 - H2: Quando faz sentido usar uma plataforma online
 - H2: Quando voce precisa de consultoria presencial
@@ -858,7 +867,7 @@ schema: []                   # Tipos de schema: Article, FAQPage, HowTo, Breadcr
 | S1 | Lei 15.042/2024 SBCE: O que Muda para Sua Empresa | Urgencia regulatoria | GEE | 2.200 |
 | S2 | PGRS 2025: Guia Completo | **PILAR** | PGRS | 4.500 |
 | S3 | Relatorio de Sustentabilidade para PMEs 2025 | **PILAR** | RS | 4.200 |
-| S4 | Inventario de Carbono GEE 2025: Guia Completo | **PILAR** | GEE | 4.500 |
+| S4 | Inventario de Carbono GEE 2025: Guia Completo | **PILAR** (informacional) | GEE | 4.500 |
 | Bonus | Auto-diagnostico de Compliance Ambiental | PLG Tool | Cross | — |
 
 **Total Mes 1**: ~15.400 palavras + 1 ferramenta interativa
@@ -874,7 +883,7 @@ schema: []                   # Tipos de schema: Article, FAQPage, HowTo, Breadcr
 | S2 | PGRSS para Clinicas e Consultorios (RDC 222) | Satelite transacional | PGRS | 2.500 |
 | S3 | CBAM para Exportadores Brasileiros | Satelite urgencia | GEE | 2.200 |
 | S4 | Glossario de Sustentabilidade (60+ termos) | Asset SEO permanente | Cross | 5.000+ |
-| Bonus | Calculadora de Emissoes GEE | PLG Tool | GEE | — |
+| Bonus | Calculadora de Emissoes GEE | PLG Tool (educacional) | GEE | — |
 
 **Total Mes 2**: ~11.500+ palavras + 1 ferramenta interativa
 
@@ -1001,8 +1010,8 @@ schema: []                   # Tipos de schema: Article, FAQPage, HowTo, Breadcr
 | Semana | Peca | Tipo | Cluster | Palavras |
 |---|---|---|---|---|
 | S1 | Urgencia: PGRS Renovacao — Nao Perca o Prazo em 2026 | Urgencia/conversao | PGRS | 1.500 |
-| S2 | Inventario GEE Ano-Base 2025: Comece Agora para Fechar a Tempo | Urgencia/conversao | GEE | 1.800 |
-| S3 | Bundle PGRS + GEE + RS: O Pacote Completo de Compliance para 2026 | Landing conversao | Cross | 1.200 |
+| S2 | Emissoes GEE no Relatorio de Sustentabilidade: Como Incluir Dados de 2025 | Informacional/conversao RS | GEE→RS | 1.800 |
+| S3 | Bundle PGRS + RS: O Pacote Completo de Compliance para 2026 | Landing conversao | Cross | 1.200 |
 | S4 | Retrospectiva Sustentabilidade PMEs 2025: O que Mudou | Blog awareness | Blog | 2.000 |
 
 **Total Mes 11**: ~6.500 palavras
@@ -1028,7 +1037,7 @@ schema: []                   # Tipos de schema: Article, FAQPage, HowTo, Breadcr
 
 | Tipo | Quantidade | Palavras estimadas |
 |---|---|---|
-| Pilares (novos) | 3 | ~13.200 |
+| Pilares (novos) | 3 (2 produto + 1 informacional GEE) | ~13.200 |
 | Pilares (refresh) | 3 | ~2.000 |
 | Satelites | 28 | ~58.000 |
 | Blog (TOFU + comparativo + parceria) | 9 | ~18.000 |
@@ -1468,7 +1477,7 @@ Nota: maximo 5 `Question` items. NAO usar em pilares. Respostas concisas (2-3 fr
 }
 ```
 
-Nota: replicar estrutura `Service` + `OfferCatalog` para GEE e RS na mesma pagina.
+Nota: replicar estrutura `Service` + `OfferCatalog` para RS na mesma pagina. GEE nao tem pagina de precos (nao e produto).
 
 #### Organization (home + sobre)
 
@@ -1505,10 +1514,9 @@ Na `/sobre/`, adicionar `ProfessionalService`:
   "@type": "ProfessionalService",
   "name": "{{brandName}}",
   "description": "Consultoria em compliance ambiental para PMEs brasileiras",
-  "priceRange": "R$490 - R$6.990",
+  "priceRange": "R$490 - R$4.390",
   "knowsAbout": [
     "PGRS",
-    "Inventario de Carbono GEE",
     "Relatorio de Sustentabilidade",
     "Compliance Ambiental",
     "ESG para PMEs"
@@ -1624,7 +1632,7 @@ Incluir no final de todos os pilares, antes do FAQ:
 | Cluster | Lead Magnet | Formato | Conteudo | Objetivo |
 |---|---|---|---|---|
 | **PGRS** | "Checklist: Sua empresa precisa de PGRS?" | PDF (3-5 paginas) | 15 perguntas sim/nao baseadas em Lei 12.305 Art. 20, limiares municipais (SP/RJ/BH/PR/RS), classificacao CNAE. Resultado: "obrigado", "recomendado", ou "nao aplicavel" com proximos passos | Qualificar leads por obrigatoriedade; capturar email + CNAE |
-| **GEE** | "Planilha: Calculadora simplificada de emissoes CO2" | Google Sheets (template copiavel) | Inputs: consumo energia (kWh), combustivel (L), viagens (km). Output: tCO2e estimado por escopo. Fatores de emissao MCTI embutidos. Disclaimer de simplificacao | Demonstrar valor do inventario completo; capturar email para acesso |
+| **GEE** (educacional) | "Planilha: Calculadora simplificada de emissoes CO2" | Google Sheets (template copiavel) | Inputs: consumo energia (kWh), combustivel (L), viagens (km). Output: tCO2e estimado por escopo. Fatores de emissao MCTI embutidos. Disclaimer de simplificacao | Educar sobre emissoes; capturar email; direcionar para RS se empresa tiver dados |
 | **RS** | "Template: Modelo de Relatorio GRI Simplificado" | DOCX (10-15 paginas) | Estrutura basica GRI Standards 2021 adaptada para PMEs. Secoes pre-montadas com instrucoes. Indicadores obrigatorios vs. opcionais marcados | Reduzir intimidacao do relatorio; mostrar que a versao profissional e muito melhor |
 
 **Regras de lead magnets:**
@@ -1682,15 +1690,17 @@ Artigo urgencia/multa/prazo → CTA "Regularize em 5 dias uteis"
 | 6 | 18 | Como [empresa do setor X] regularizou em 10 dias | Case study ou exemplo hipotetico (se ainda nao tiver cases reais) | Agendar consulta |
 | 7 | 21 | Ultima chance: diagnostico gratuito de compliance | Oferta de consulta de 15 min sem compromisso | WhatsApp/Calendly |
 
-#### Sequencia GEE (5 emails, 14 dias)
+#### Sequencia GEE (5 emails, 14 dias) — REDIRECIONA PARA RS
+
+> **v2.1**: Sequencia mantida para leads que baixaram a calculadora GEE. Objetivo: educar sobre emissoes e converter para RS (onde dados GEE podem ser incorporados).
 
 | # | Dia | Assunto | Conteudo | CTA |
 |---|---|---|---|---|
 | 1 | 0 | Sua planilha de emissoes esta pronta | Entrega do lead magnet + contexto SBCE | Acessar planilha |
 | 2 | 3 | Lei 15.042/2024: o que muda para sua empresa | Resumo SBCE + disclaimer regulamentacao pendente | Ler artigo SBCE |
 | 3 | 7 | Escopos 1, 2 e 3: por que seu cliente ja esta perguntando | Supply chain pressure + exigencias de grandes empresas | Ler artigo escopos |
-| 4 | 10 | Da planilha ao inventario profissional: qual a diferenca | Limitacoes da planilha vs. inventario GHG Protocol completo | Ver precos GEE |
-| 5 | 14 | Seu inventario de carbono em 10 dias: vamos conversar? | Oferta de diagnostico gratuito | WhatsApp/Calendly |
+| 4 | 10 | Seus dados de emissoes valem mais dentro de um Relatorio de Sustentabilidade | Framing: GEE como componente do RS, nao produto isolado | Ver precos RS |
+| 5 | 14 | Vamos montar seu Relatorio de Sustentabilidade com dados de emissoes? | Oferta de diagnostico gratuito — RS com dados GEE incorporados | WhatsApp/Calendly |
 
 #### Sequencia RS (5 emails, 14 dias)
 
@@ -1760,7 +1770,7 @@ Usar em todo artigo que cita dados: referencia obrigatoria a fonte oficial (IBAM
 | Origem | Mensagem Pre-Preenchida |
 |---|---|
 | `/pgrs/` e satelites | `Ola! Vim do site e tenho duvidas sobre PGRS para minha empresa.` |
-| `/inventario-carbono/` e satelites | `Ola! Preciso de informacoes sobre inventario de carbono GEE.` |
+| `/inventario-carbono/` e satelites | `Ola! Tenho duvidas sobre emissoes de carbono e relatorio de sustentabilidade.` |
 | `/relatorio-sustentabilidade/` e satelites | `Ola! Quero saber mais sobre relatorio de sustentabilidade.` |
 | `/precos/` | `Ola! Vi os precos no site e gostaria de um orcamento personalizado.` |
 | `/ferramentas/*` (pos-resultado) | `Ola! Usei a [ferramenta] no site e quero saber sobre o servico completo.` |
@@ -2457,19 +2467,20 @@ paloma/
 | Servico | Standard (10 dias) | Express (5 dias) | Urgente (48h) | Renovacao Anual |
 |---|---|---|---|---|
 | **PGRS** | R$990 | R$1.490 | R$2.490 | R$490 |
-| **Inventario GEE** | R$1.290 | R$1.790 | R$2.990 | R$690 |
 | **Relatorio RS** | R$1.490 | R$1.990 | R$2.990 | R$790 |
-| **Bundle (PGRS+GEE+RS)** | R$2.990 (-20%) | R$4.290 (-19%) | R$6.990 (-17%) | R$1.490 (-24%) |
+| **Bundle (PGRS+RS)** | R$1.990 (-20%) | R$2.790 (-20%) | R$4.390 (-20%) | R$990 (-23%) |
+| ~~Inventario GEE~~ | **REMOVIDO v2.1** — nao e produto | — | — | — |
+
+> Se a empresa ja possuir dados de emissoes GEE (escopo 1 e 2), eles sao incorporados ao RS sem custo adicional.
 
 #### Ancoragem e Upsell
 - Exibir sempre os 3 tiers lado a lado (ancoragem: urgente faz standard parecer barato)
 - Destaque visual no tier Express (most popular)
-- Bundle destacado como "Economize ate 24%"
+- Bundle destacado como "Economize ate 20%"
 - Renovacao anual mencionada em todo artigo de "renovacao PGRS" e no email pos-venda
 
 #### Receita Recorrente
 - Renovacao anual obrigatoria para PGRS (Lei 12.305, empresas com licenciamento)
-- Renovacao GEE (inventario anual, ano-base anterior)
 - Update de RS (novo periodo reportado)
 - **Meta Mes 12**: 30% da receita vinda de renovacoes
 
@@ -2506,7 +2517,9 @@ paloma/
 **Gate**: resultado parcial gratuito. Resultado completo em PDF: exige email + CNAE.
 **Conversao esperada**: 5-15% (email capture)
 
-#### Ferramenta 2 — Calculadora de Emissoes GEE (Mes 2)
+#### Ferramenta 2 — Calculadora de Emissoes GEE (Mes 2) — EDUCACIONAL
+
+> **v2.1**: Ferramenta mantida como PLG tool educacional para captura de leads. Nao vende inventario GEE — redireciona para RS se empresa tiver dados de emissoes.
 
 **URL**: `/ferramentas/calculadora-emissoes/`
 
@@ -2521,7 +2534,7 @@ paloma/
 
 **Gate**: resultado na tela gratuito. PDF com detalhamento e recomendacoes: exige email.
 **Conversao esperada**: 8-20% (email capture)
-**Upsell**: "Este e uma estimativa simplificada. Para um inventario profissional certificavel com metodologia GHG Protocol, a partir de R$1.290"
+**Upsell**: "Ja tem esses dados? Inclua as emissoes no seu Relatorio de Sustentabilidade profissional, a partir de R$1.490. Dados GEE de escopo 1 e 2 sao incorporados sem custo adicional ao RS."
 
 #### Ferramenta 3 — Gerador de PGRS Basico (Mes 4)
 
@@ -2608,7 +2621,7 @@ paloma/
 | 8 | **Criar lead magnet PGRS** — Checklist "Sua empresa precisa de PGRS?" em PDF (3-5 paginas, design Canva) | Fundador | Dia 4-5 | Nenhuma | PDF pronto para download |
 | 9 | **Configurar Brevo** — Conta free, listas por cluster (PGRS/GEE/RS), template base de email, formulario de intake (integravel com site) | Dev | Dia 4-5 | Nenhuma | Brevo configurado com 1 automacao de welcome |
 | 10 | **Escrever artigo urgencia SBCE** — Primeiro conteudo publicado. Lei 15.042/2024, framing correto (regulamentacao pendente), E-E-A-T com credenciais do RT | Fundador + RT | Dia 5-7 | **#1** (precisa do RT para E-E-A-T) | Artigo publicado e submetido ao GSC |
-| 11 | **Configurar Google Ads** — Conta, keywords high-intent (5-10 termos: "fazer pgrs", "inventario carbono empresa", "relatorio sustentabilidade"), budget R$30/dia, landing page = `/precos/` ou pilar | Fundador | Dia 5-7 | #3, pagina de precos minima | Campanha ativa com tracking de conversao |
+| 11 | **Configurar Google Ads** — Conta, keywords high-intent (5-10 termos: "fazer pgrs", "relatorio sustentabilidade pme", "pgrs empresa"), budget R$30/dia, landing page = `/precos/` ou pilar | Fundador | Dia 5-7 | #3, pagina de precos minima | Campanha ativa com tracking de conversao |
 | 12 | **Configurar PostHog** — Conta free, instalar SDK, eventos basicos (page_view, cta_click, form_submit, whatsapp_click) | Dev | Dia 5-7 | #3 | Analytics ativo com dashboard basico |
 
 **Checkpoint Semana 1**: RT parceiro confirmado, site no ar (placeholder), WhatsApp ativo, 20 contadores contactados, Brevo configurado, primeiro artigo em producao.
