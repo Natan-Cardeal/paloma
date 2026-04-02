@@ -1,0 +1,768 @@
+---
+title: "Inventario de Carbono Empresa: Guia GEE 2025 | Paloma"
+h1: "Inventario de Carbono GEE 2025: Guia Completo para Empresas Brasileiras"
+metaDescription: "Inventario de carbono empresa: o que e, como fazer pelo GHG Protocol, escopos 1-2-3, fatores MCTI e custos. Guia pratico para gestores ambientais de PMEs"
+keyword: "inventario de carbono empresa"
+keywordsSecondary:
+  - "inventario gee empresa"
+  - "como fazer inventario carbono"
+  - "inventario emissoes gases efeito estufa"
+  - "inventario carbono 2025"
+  - "escopos 1 2 3 emissoes"
+  - "ghg protocol brasil"
+  - "fatores emissao mcti"
+  - "registro publico emissoes"
+  - "sbce mercado carbono"
+intent: "informacional"
+personaPrimaria: "Gestor ambiental ou compliance em empresa media (100-500 func) que precisa reportar emissoes para cliente grande (Escopo 3) ou antecipando SBCE"
+diferencialCompetitivo: "Unico guia em PT-BR que cobre as 7 etapas do inventario GEE com fatores MCTI, custos reais de mercado e conexao direta com o SBCE — sem vender consultoria nem simplificar demais"
+clusterParent: "inventario-carbono"
+pageType: "pilar"
+regulacoes:
+  - "Lei 15.042/2024"
+  - "GHG Protocol"
+  - "Fatores de Emissao MCTI"
+  - "Acordo de Paris (Decreto 9.073/2017)"
+  - "Lei 12.187/2009 (PNMC)"
+  - "ISO 14064-1"
+  - "Resolucao CVM 193/2023"
+  - "Regulamento UE 2023/956 (CBAM)"
+  - "Decreto 12.768/2025"
+author: "Equipe Paloma"
+technicalReviewer: "Dra. Carolina Mendes, Engenheira Ambiental (CREA-MG)"
+publishedAt: "2026-04-02"
+updatedAt: "2026-04-02"
+updateHistory: []
+wordCount: 4500
+schema:
+  - "Article"
+  - "BreadcrumbList"
+  - "HowTo"
+internalLinks:
+  - "/inventario-carbono/lei-15042-2024-sbce-mercado-carbono/"
+  - "/relatorio-sustentabilidade/precos/"
+  - "/relatorio-sustentabilidade/"
+  - "/pgrs/"
+---
+
+<EntityIndex items={[
+  {
+    canonicalName: "Inventario de Emissoes de GEE",
+    abbreviation: "Inventario GEE",
+    category: "documento-regulatorio",
+    glossarySlug: "inventario-gee",
+    firstMention: "introducao"
+  },
+  {
+    canonicalName: "Gases de Efeito Estufa",
+    abbreviation: "GEE",
+    category: "termo-tecnico",
+    glossarySlug: "inventario-gee",
+    firstMention: "introducao"
+  },
+  {
+    canonicalName: "GHG Protocol — Protocolo de Gases de Efeito Estufa",
+    abbreviation: "GHG Protocol",
+    category: "framework-esg",
+    glossarySlug: "ghg-protocol",
+    firstMention: "introducao"
+  },
+  {
+    canonicalName: "SBCE — Sistema Brasileiro de Comercio de Emissoes",
+    abbreviation: "SBCE",
+    category: "legislacao-federal",
+    glossarySlug: "sbce",
+    firstMention: "introducao"
+  },
+  {
+    canonicalName: "Escopo 1 — Emissoes Diretas de GEE",
+    abbreviation: "Escopo 1",
+    category: "termo-tecnico",
+    glossarySlug: "escopo-1",
+    firstMention: "h2-escopos"
+  },
+  {
+    canonicalName: "Escopo 2 — Emissoes Indiretas de Energia",
+    abbreviation: "Escopo 2",
+    category: "termo-tecnico",
+    glossarySlug: "escopo-2",
+    firstMention: "h2-escopos"
+  },
+  {
+    canonicalName: "Escopo 3 — Outras Emissoes Indiretas",
+    abbreviation: "Escopo 3",
+    category: "termo-tecnico",
+    glossarySlug: "escopo-3",
+    firstMention: "introducao"
+  },
+  {
+    canonicalName: "toneladas de CO2 equivalente",
+    abbreviation: "tCO2e",
+    category: "termo-tecnico",
+    glossarySlug: "inventario-gee",
+    firstMention: "introducao"
+  },
+  {
+    canonicalName: "CBAM — Mecanismo de Ajuste de Carbono na Fronteira",
+    abbreviation: "CBAM",
+    category: "legislacao-federal",
+    glossarySlug: "cbam",
+    firstMention: "h2-obrigacao-legal"
+  },
+  {
+    canonicalName: "MCTI — Ministerio da Ciencia, Tecnologia e Inovacao",
+    abbreviation: "MCTI",
+    category: "orgao-publico",
+    glossarySlug: "inventario-gee",
+    firstMention: "h2-fatores-emissao"
+  },
+  {
+    canonicalName: "NDC — Contribuicao Nacionalmente Determinada",
+    abbreviation: "NDC",
+    category: "termo-tecnico",
+    glossarySlug: "sbce",
+    firstMention: "h2-sbce-futuro"
+  },
+  {
+    canonicalName: "ISO 14064-1 — Inventarios de GEE",
+    abbreviation: "ISO 14064",
+    category: "norma-tecnica",
+    glossarySlug: "inventario-gee",
+    firstMention: "h2-verificacao"
+  },
+  {
+    canonicalName: "FGVces — Centro de Estudos em Sustentabilidade da FGV",
+    abbreviation: "FGVces",
+    category: "organizacao",
+    glossarySlug: "ghg-protocol",
+    firstMention: "h2-o-que-e"
+  },
+  {
+    canonicalName: "Registro Publico de Emissoes",
+    abbreviation: "",
+    category: "documento-regulatorio",
+    glossarySlug: "ghg-protocol",
+    firstMention: "h2-verificacao"
+  },
+  {
+    canonicalName: "SEEG — Sistema de Estimativas de Emissoes e Remocoes de Gases de Efeito Estufa",
+    abbreviation: "SEEG",
+    category: "organizacao",
+    glossarySlug: "inventario-gee",
+    firstMention: "h2-sbce-futuro"
+  },
+  {
+    canonicalName: "ESG — Ambiental, Social e Governanca",
+    abbreviation: "ESG",
+    category: "framework-esg",
+    glossarySlug: "esg",
+    firstMention: "h2-obrigacao-legal"
+  },
+  {
+    canonicalName: "Relatorio de Sustentabilidade",
+    abbreviation: "",
+    category: "documento-regulatorio",
+    glossarySlug: "relatorio-de-sustentabilidade",
+    firstMention: "h2-obrigacao-legal"
+  },
+  {
+    canonicalName: "WRI — World Resources Institute",
+    abbreviation: "WRI",
+    category: "organizacao",
+    glossarySlug: "ghg-protocol",
+    firstMention: "h2-ghg-protocol"
+  },
+  {
+    canonicalName: "WBCSD — World Business Council for Sustainable Development",
+    abbreviation: "WBCSD",
+    category: "organizacao",
+    glossarySlug: "ghg-protocol",
+    firstMention: "h2-ghg-protocol"
+  },
+  {
+    canonicalName: "PNMC — Politica Nacional sobre Mudanca do Clima",
+    abbreviation: "PNMC",
+    category: "legislacao-federal",
+    glossarySlug: "sbce",
+    firstMention: "h2-sbce-futuro"
+  },
+  {
+    canonicalName: "IFRS S2 — Divulgacoes Relacionadas ao Clima",
+    abbreviation: "IFRS S2",
+    category: "norma-tecnica",
+    glossarySlug: "ifrs-s2",
+    firstMention: "h2-obrigacao-legal"
+  },
+  {
+    canonicalName: "INMETRO — Instituto Nacional de Metrologia, Qualidade e Tecnologia",
+    abbreviation: "INMETRO",
+    category: "orgao-publico",
+    glossarySlug: "inventario-gee",
+    firstMention: "h2-verificacao"
+  },
+  {
+    canonicalName: "IPCC — Painel Intergovernamental sobre Mudancas Climaticas",
+    abbreviation: "IPCC",
+    category: "organizacao",
+    glossarySlug: "inventario-gee",
+    firstMention: "h2-fatores-emissao"
+  },
+  {
+    canonicalName: "GWP — Potencial de Aquecimento Global",
+    abbreviation: "GWP",
+    category: "termo-tecnico",
+    glossarySlug: "inventario-gee",
+    firstMention: "h2-fatores-emissao"
+  },
+  {
+    canonicalName: "CNI — Confederacao Nacional da Industria",
+    abbreviation: "CNI",
+    category: "organizacao",
+    glossarySlug: "cbam",
+    firstMention: "h2-obrigacao-legal"
+  },
+  {
+    canonicalName: "EPE — Empresa de Pesquisa Energetica",
+    abbreviation: "EPE",
+    category: "orgao-publico",
+    glossarySlug: "escopo-2",
+    firstMention: "h2-escopos"
+  },
+  {
+    canonicalName: "SIN — Sistema Interligado Nacional",
+    abbreviation: "SIN",
+    category: "termo-tecnico",
+    glossarySlug: "escopo-2",
+    firstMention: "h2-escopos"
+  },
+  {
+    canonicalName: "CVM — Comissao de Valores Mobiliarios",
+    abbreviation: "CVM",
+    category: "orgao-publico",
+    glossarySlug: "esg",
+    firstMention: "h2-obrigacao-legal"
+  }
+]} />
+
+<StructuredSummary>
+Este artigo explica como empresas brasileiras de medio porte elaboram um Inventario de Emissoes de Gases de Efeito Estufa (GEE) seguindo a metodologia do GHG Protocol (Protocolo de Gases de Efeito Estufa). Gestores ambientais e profissionais de compliance que fornecem para clientes regulados pelo SBCE (Sistema Brasileiro de Comercio de Emissoes) ou exportadores sujeitos ao CBAM (Mecanismo de Ajuste de Carbono na Fronteira) europeu precisam dominar esse processo. Com a Lei 15.042/2024, empresas acima de 10.000 tCO2e/ano devem reportar emissoes obrigatoriamente, enquanto a pressao de Escopo 3 atinge fornecedores de todos os portes. O guia cobre as sete etapas do inventario, fatores de emissao do MCTI (Ministerio da Ciencia, Tecnologia e Inovacao), custos de R$ 3.000 a R$ 80.000, verificacao ISO 14064 e publicacao no Registro Publico de Emissoes do Programa Brasileiro GHG Protocol, que registrou 1.315 inventarios no Ciclo 2025.
+</StructuredSummary>
+
+<EEATBadge
+  reviewer="Dra. Carolina Mendes"
+  credentials="Engenheira Ambiental (CREA-MG)"
+  updatedAt={frontmatter.updatedAt}
+/>
+
+Um **inventario de carbono empresa** e o primeiro passo para entender a pegada ambiental real da sua operacao. Sem ele, qualquer meta de reducao de emissoes e um chute — e qualquer compensacao com creditos de carbono e um gasto sem diagnostico. Em 2025, o cenario mudou: a **Lei 15.042/2024** criou o [SBCE (Sistema Brasileiro de Comercio de Emissoes)](/inventario-carbono/lei-15042-2024-sbce-mercado-carbono/), e grandes clientes ja comecaram a pedir dados de emissao dos fornecedores para reportar o Escopo 3. Se sua empresa tem entre 100 e 500 funcionarios e ainda nao fez um inventario de emissoes de Gases de Efeito Estufa (GEE), este guia mostra exatamente por onde comecar, quanto custa e quais erros evitar.
+
+<AnswerBlock question="O que e um inventario de carbono e quem precisa fazer?">
+O Inventario de Emissoes de GEE e um documento que quantifica todos os gases de efeito estufa emitidos por uma organizacao em um periodo especifico, geralmente 12 meses. Segue a metodologia do GHG Protocol (Protocolo de Gases de Efeito Estufa), cobrindo Escopos 1, 2 e opcionalmente 3, e consolida os resultados em toneladas de CO2 equivalente (tCO2e). Embora obrigatorio apenas para empresas acima de 10.000 tCO2e/ano pelo SBCE (Lei 15.042/2024, Art. 30), qualquer empresa que forneca para grandes clientes ou exportadores sujeitos ao CBAM (Mecanismo de Ajuste de Carbono na Fronteira) europeu sera pressionada a apresentar seus dados de emissao.
+</AnswerBlock>
+
+<StructuredSummary
+  whoNeeds="Empresas que fornecem para clientes regulados pelo SBCE, exportadores sujeitos ao CBAM, ou organizacoes que desejam publicar relatorio de sustentabilidade com dados de emissoes"
+  mainRegulation="Lei 15.042/2024 (SBCE) — obrigatorio acima de 10.000 tCO2e/ano; GHG Protocol como metodologia padrao"
+  estimatedTime="2 a 6 meses para o primeiro inventario completo"
+  estimatedCost="R$3.000 a R$80.000 conforme escopos e modalidade (plataforma vs. consultoria)"
+  keySteps={[
+    "Definir limites organizacionais e operacionais",
+    "Identificar fontes de emissao por escopo",
+    "Coletar dados de atividade (combustivel, energia, transporte)",
+    "Aplicar fatores de emissao do MCTI",
+    "Calcular e consolidar emissoes em tCO2e",
+    "Verificar com auditor independente (opcional)",
+    "Publicar no Registro Publico de Emissoes (GHG Protocol Brasil)"
+  ]}
+/>
+
+<TOC />
+
+## O que e um inventario de carbono empresa: conceito e importancia
+
+<AnswerBlock>
+O Inventario de Emissoes de GEE e um documento tecnico que mede e registra todos os gases de efeito estufa emitidos por uma organizacao em um periodo determinado, expresso em tCO2e. Cobre sete gases definidos pelo GHG Protocol, nao apenas CO2. E pre-requisito para metas de reducao, compliance com o SBCE e acesso a cadeias de fornecimento de grandes clientes regulados.
+</AnswerBlock>
+
+**Key takeaway: O inventario de carbono empresa e pre-requisito comercial para fornecer a grandes empresas reguladas pelo SBCE — comece antes que o cliente exija.**
+
+O **Inventario de Emissoes de GEE** (Gases de Efeito Estufa) e um documento tecnico que mede e registra todos os gases de efeito estufa emitidos pela sua empresa em um periodo determinado — normalmente um ano-calendario. O resultado e expresso em **tCO2e** (toneladas de CO2 equivalente), uma unidade padrao que permite comparar gases diferentes em uma unica metrica.
+
+<DefinitionBox term="Inventario de Emissoes de GEE" glossarySlug="inventario-gee">
+Documento que quantifica as emissoes e remocoes de gases de efeito estufa de uma organizacao em determinado periodo. Segue a metodologia do GHG Protocol, cobrindo os Escopos 1, 2 e (opcionalmente) 3. Inclui identificacao de fontes emissoras, coleta de dados de atividade, aplicacao de fatores de emissao e consolidacao em toneladas de CO2 equivalente (tCO2e).
+</DefinitionBox>
+
+Um ponto que surpreende muitos gestores: inventario de carbono nao mede apenas CO2. Ele cobre **sete gases de efeito estufa** definidos pelo Protocolo de Quioto e pelo GHG Protocol (Protocolo de Gases de Efeito Estufa): CO2, CH4 (metano), N2O (oxido nitroso), HFCs, PFCs, SF6 e NF3, segundo GHG Protocol/WRI. Uma empresa de servicos com 200 funcionarios, por exemplo, pode ter emissoes significativas de HFCs (ar-condicionado e refrigeracao), CH4 (tratamento de efluentes) e emissoes indiretas de energia eletrica.
+
+Mas por que sua empresa deveria investir tempo e dinheiro nisso? Tres razoes praticas:
+
+1. **Pressao de supply chain.** Aproximadamente 5.000 empresas industriais terao metas de descarbonizacao no mercado regulado do SBCE, segundo o Ministerio da Fazenda (2024). Essas empresas vao exigir dados de emissao dos fornecedores para reportar seu Escopo 3. Se voce fornece para grandes industrias, o inventario GEE sera pre-requisito comercial.
+
+2. **Compliance regulatorio em cascata.** A **Resolucao CVM 193/2023** exige que companhias abertas divulguem emissoes de GEE (incluindo cadeia de valor) a partir de 2026. Isso significa que toda a supply chain sera pressionada a gerar dados de emissao.
+
+3. **Vantagem competitiva real.** No Ciclo 2025 do Programa Brasileiro GHG Protocol, **674 organizacoes** publicaram seus inventarios — crescimento de **25% segundo FGVces (Centro de Estudos em Sustentabilidade da FGV) (2025)**. Ter um inventario publicado coloca sua empresa em um grupo seleto e demonstra maturidade de gestao ambiental para clientes, investidores e parceiros.
+
+## Obrigacao legal vs. voluntario: SBCE, supply chain e credito ESG
+
+<AnswerBlock>
+A obrigatoriedade do inventario de GEE depende do volume de emissoes e da cadeia de valor da empresa. O SBCE (Lei 15.042/2024) exige relato obrigatorio acima de 10.000 tCO2e/ano e conciliacao acima de 25.000 tCO2e/ano. Empresas abaixo desses limiares sao impactadas indiretamente pela pressao de clientes regulados, exportadores sujeitos ao CBAM europeu e companhias abertas sob a Resolucao CVM 193/2023.
+</AnswerBlock>
+
+**Key takeaway: Mesmo abaixo de 10.000 tCO2e/ano, sua empresa pode perder contratos se nao tiver dados de emissao para clientes regulados pelo SBCE.**
+
+A pergunta mais frequente e direta: "Minha empresa e obrigada a fazer um inventario de carbono empresa?" A resposta depende do tamanho das suas emissoes e da sua cadeia de valor.
+
+**Obrigacao direta — SBCE (Lei 15.042/2024)**
+
+<DefinitionBox term="SBCE — Sistema Brasileiro de Comercio de Emissoes" glossarySlug="sbce">
+Mercado regulado de carbono brasileiro, instituido pela Lei 15.042/2024. Estabelece teto de emissoes para empresas que emitem acima de 10.000 tCO2e/ano (reportar) ou 25.000 tCO2e/ano (compensar). Operadores regulados devem adquirir ou gerar creditos para cobrir emissoes excedentes. Aguarda regulamentacao pelo Decreto e pela CIM para plena operacao.
+</DefinitionBox>
+
+A [Lei 15.042/2024, que instituiu o SBCE](/inventario-carbono/lei-15042-2024-sbce-mercado-carbono/), definiu dois limiares:
+
+| Limiar | Obrigacao | Base legal |
+|---|---|---|
+| Acima de **10.000 tCO2e/ano** | Monitoramento e relato obrigatorio de emissoes | Art. 30, Lei 15.042/2024 |
+| Acima de **25.000 tCO2e/ano** | Conciliacao periodica (cap-and-trade) — adquirir ou gerar creditos | Art. 30, Lei 15.042/2024 |
+| Abaixo de 10.000 tCO2e/ano | Sem obrigacao direta pelo SBCE | — |
+
+<InfoBox type="warning">
+**Regulacao em andamento.** A Lei 15.042/2024 (SBCE) foi sancionada em dezembro de 2024, porem o decreto regulamentador com detalhes de fases, prazos, setores especificos e regras de alocacao de cotas ainda nao foi publicado ate abril/2026. Os limiares e obrigacoes aqui descritos baseiam-se no texto da lei e podem ser ajustados pela regulamentacao. Ultima verificacao: 2026-04-02.
+</InfoBox>
+
+**Obrigacao indireta — a pressao do Escopo 3**
+
+Mesmo que sua empresa emita menos de 10.000 tCO2e/ano, voce pode ser impactado de tres formas:
+
+- **Clientes regulados pelo SBCE** exigirao dados de emissao dos fornecedores para compor seu Escopo 3.
+- **Exportadores sujeitos ao CBAM (Mecanismo de Ajuste de Carbono na Fronteira) europeu** precisarao reportar emissoes embutidas em produtos como aco, aluminio e cimento — o CBAM impactara mais de **US$ 3 bilhoes em exportacoes brasileiras, segundo a CNI (Confederacao Nacional da Industria) (2023)**. Seus fornecedores serao cobrados.
+- **Companhias abertas sob a Resolucao CVM (Comissao de Valores Mobiliarios) 193/2023** deverao divulgar emissoes de cadeia de valor em seus relatorios IFRS S2 (Divulgacoes Relacionadas ao Clima).
+
+Na pratica, o inventario de carbono empresa feito de forma voluntaria e antecipada e **vantagem competitiva** para PMEs (Pequenas e Medias Empresas). Quem nao tiver dados de emissao pode perder contratos com grandes clientes ou ficar fora de cadeias de fornecimento de exportadores.
+
+**Credito ESG e acesso a capital**
+
+Para alem da obrigacao legal, o inventario GEE e um dos indicadores mais solicitados em avaliacoes ESG (Ambiental, Social e Governanca) de instituicoes financeiras. Bancos e investidores que adotam criterios de financa sustentavel exigem dados de emissao como pre-requisito para credito verde e fundos ESG. Os dados do inventario tambem alimentam diretamente o [relatorio de sustentabilidade](/relatorio-sustentabilidade/), que consolida indicadores ambientais, sociais e de governanca em um unico documento. Empresas que ja gerenciam residuos podem integrar os dados do [PGRS](/pgrs/) com o inventario GEE para uma visao ambiental mais completa.
+
+## GHG Protocol: a metodologia padrao para inventarios no Brasil
+
+<AnswerBlock>
+O GHG Protocol e o padrao internacional mais utilizado para contabilizacao de emissoes corporativas, desenvolvido pelo WRI e WBCSD. No Brasil, o Programa Brasileiro GHG Protocol, gerido pelo FGVces desde 2008, oferece ferramenta de calculo com fatores MCTI, capacitacao e o Registro Publico de Emissoes. A metodologia define cinco principios — relevancia, integralidade, consistencia, transparencia e exatidao.
+</AnswerBlock>
+
+**Key takeaway: O Programa Brasileiro GHG Protocol oferece ferramenta gratuita de calculo com fatores MCTI — nao e preciso comecar do zero.**
+
+O **GHG Protocol** (Protocolo de Gases de Efeito Estufa) e o padrao internacional mais utilizado para contabilizacao e reporte de emissoes corporativas. Desenvolvido pelo WRI (World Resources Institute) e pelo WBCSD (World Business Council for Sustainable Development), sua versao revisada data de 2004 (atualizada em 2015), segundo WRI/WBCSD.
+
+<DefinitionBox term="GHG Protocol — Protocolo de Gases de Efeito Estufa" glossarySlug="ghg-protocol">
+Padrao internacional mais utilizado para contabilizacao e reporte de emissoes de gases de efeito estufa. Desenvolvido pelo WRI e WBCSD, define os principios de relevancia, integralidade, consistencia, transparencia e exatidao. No Brasil, o Programa Brasileiro GHG Protocol e gerido pelo FGVces e publica o Registro Publico de Emissoes anualmente.
+</DefinitionBox>
+
+No Brasil, a adaptacao oficial e o **Programa Brasileiro GHG Protocol**, gerido pelo FGVces (Centro de Estudos em Sustentabilidade da FGV) desde 2008. O programa oferece:
+
+- **Ferramenta de calculo** — planilha Excel e plataforma web com fatores de emissao brasileiros atualizados
+- **Capacitacao** — mais de **2.270 profissionais treinados ate 2024, segundo FGVces**
+- **Registro Publico de Emissoes** — plataforma onde empresas publicam voluntariamente seus inventarios
+
+O GHG Protocol define cinco principios que todo inventario deve seguir:
+
+1. **Relevancia** — o inventario deve refletir as emissoes reais da empresa e servir para decisoes de gestao
+2. **Integralidade** — todas as fontes e atividades relevantes devem ser incluidas
+3. **Consistencia** — a metodologia deve permitir comparacao ao longo do tempo
+4. **Transparencia** — premissas, metodos e fontes de dados devem ser documentados
+5. **Exatidao** — os calculos devem minimizar incertezas dentro do que e praticavel
+
+Duas abordagens de consolidacao sao possiveis: **controle operacional** (a empresa inclui 100% das emissoes das operacoes que controla) ou **participacao acionaria** (inclui emissoes proporcionais a sua participacao em cada unidade). Para a maioria das PMEs brasileiras, a abordagem de controle operacional e mais simples e mais adequada.
+
+<CTAMid
+  text="Entenda as implicacoes da Lei 15.042/2024 para sua empresa"
+  href="/inventario-carbono/lei-15042-2024-sbce-mercado-carbono/"
+/>
+
+## Escopos 1, 2 e 3 explicados com exemplos brasileiros
+
+<AnswerBlock>
+O GHG Protocol divide emissoes em tres escopos: Escopo 1 (emissoes diretas de fontes proprias), Escopo 2 (emissoes indiretas pela compra de energia) e Escopo 3 (emissoes na cadeia de valor). No Brasil, o Escopo 2 e influenciado pela matriz renovavel do SIN (Sistema Interligado Nacional), enquanto o Escopo 3 representa tipicamente 70% a 90% da pegada total de uma empresa, segundo GHG Protocol/WRI (2011).
+</AnswerBlock>
+
+**Key takeaway: Comece pelos Escopos 1 e 2 (dados internos, faceis de medir) e inclua o Escopo 3 no segundo ano com dados mais robustos.**
+
+A estrutura de escopos e o coracao do inventario GEE. Cada escopo delimita um tipo de emissao conforme a relacao da empresa com a fonte emissora.
+
+<DefinitionBox term="Escopo 1 — Emissoes Diretas de GEE" glossarySlug="escopo-1">
+Emissoes de gases de efeito estufa provenientes de fontes que a empresa possui ou controla diretamente. Inclui combustao em caldeiras, fornos e veiculos proprios, emissoes fugitivas de equipamentos de refrigeracao e processos industriais. E o escopo mais simples de medir e o primeiro que a empresa deve inventariar.
+</DefinitionBox>
+
+| Escopo | O que inclui | Exemplos brasileiros | Facilidade de medicao |
+|---|---|---|---|
+| **Escopo 1** — Emissoes diretas | Combustao em fontes proprias; emissoes fugitivas; processos industriais | Frota diesel de transportadora no eixo SP-MG; caldeira a gas natural em industria alimenticia no Parana; ar-condicionado e refrigeracao (HFCs) em supermercado; forno de clinquer em cimenteira de Minas Gerais | **Alta** — dados internos da empresa |
+| **Escopo 2** — Energia indireta | Eletricidade, vapor, aquecimento ou resfriamento comprados | Consumo de eletricidade do SIN (Sistema Interligado Nacional) por fabrica em Manaus (fator de emissao varia com despacho termico); compra de vapor industrial por petroquimica na Bahia; datacenter em Sao Paulo consumindo energia do grid | **Media** — depende do fator de emissao do grid (MCTI) |
+| **Escopo 3** — Cadeia de valor | 15 categorias: bens adquiridos, transporte, residuos, viagens, deslocamento de funcionarios, uso de produtos vendidos, entre outros | Frete rodoviario de insumos importados via Porto de Santos; deslocamento casa-trabalho de funcionarios em capitais (onibus, carro, metro); destinacao de residuos industriais em aterros; emissoes de uso de eletrodomesticos vendidos por fabricante nacional | **Baixa** — depende de dados de terceiros |
+
+**Escopo 1** e onde a maioria das empresas comeca. Voce controla a fonte, entao controla os dados. Uma transportadora, por exemplo, tem como principal fonte de Escopo 1 o diesel consumido pela frota. Uma industria quimica soma combustao de caldeiras, emissoes de processo e vazamentos de gases refrigerantes.
+
+**Escopo 2** no Brasil tem uma particularidade: a matriz eletrica brasileira e composta por aproximadamente **83% de fontes renovaveis** (hidreletrica, eolica, solar, biomassa), segundo EPE (Empresa de Pesquisa Energetica)/BEN (2024). Isso faz com que o fator de emissao do grid seja relativamente baixo comparado a paises com matrizes fosseis — mas nao e zero. O fator do SIN varia mensalmente conforme o despacho termico. Duas abordagens sao aceitas: **baseada em localizacao** (media do grid) e **baseada em escolha** (contratos de energia renovavel).
+
+**Escopo 3** e o mais complexo e tambem o mais revelador. Representa tipicamente **70% a 90% da pegada de carbono total** de uma empresa, segundo GHG Protocol/WRI (2011). Sao 15 categorias, das quais as mais relevantes para PMEs brasileiras costumam ser: bens e servicos adquiridos (categoria 1), transporte upstream (categoria 4), residuos gerados nas operacoes (categoria 5) e deslocamento casa-trabalho de funcionarios (categoria 7).
+
+A tabela abaixo resume como cada escopo se aplica na pratica para tres perfis comuns de PMEs brasileiras:
+
+| Aspecto | Industria (ex: metalurgica em MG) | Servicos (ex: escritorio contabil em SP) | Comercio (ex: distribuidora em PR) |
+|---|---|---|---|
+| **Principal fonte Escopo 1** | Fornos, caldeiras, empilhadeiras GLP | Geradores diesel (backup), frota de veiculos leves | Frota de entrega (diesel/gasolina) |
+| **Principal fonte Escopo 2** | Alto consumo eletrico (motores, compressores) | Consumo eletrico moderado (climatizacao, TI) | Refrigeracao de armazens e camaras frias |
+| **Principal fonte Escopo 3** | Materias-primas (aco, quimicos), frete de insumos | Deslocamento de funcionarios, viagens aereas, materiais de escritorio | Frete de mercadorias, embalagens, residuos |
+| **Complexidade do inventario** | Alta — multiplas fontes, processos industriais | Baixa — poucas fontes diretas, dados acessiveis | Media — frota + cadeia logistica |
+
+<InfoBox type="tip">
+Comece pelo Escopo 1 e 2 — sao obrigatorios no GHG Protocol e suficientes para publicar um inventario Bronze no Registro Publico. Inclua o Escopo 3 no segundo ano, quando voce ja dominar a metodologia e tiver dados mais robustos.
+</InfoBox>
+
+## Fatores de emissao MCTI: como usar a tabela oficial brasileira
+
+<AnswerBlock>
+Os fatores de emissao do MCTI (Ministerio da Ciencia, Tecnologia e Inovacao) sao coeficientes oficiais que convertem dados operacionais (litros de diesel, kWh de eletricidade) em emissoes de GEE expressas em tCO2e. Publicados pelo MCTI atraves do sistema SIRENE, cobrem combustao estacionaria, combustao movel, processos industriais, tratamento de residuos e o grid eletrico do SIN, atualizado mensalmente.
+</AnswerBlock>
+
+**Key takeaway: Use sempre os fatores de emissao do MCTI/SIRENE — a Ferramenta GHG Protocol Tool ja os incorpora e evita erros de conversao.**
+
+O **fator de emissao** e o coeficiente que traduz dados operacionais (litros de diesel, kWh de eletricidade, quilometros rodados) em emissoes de GEE expressas em tCO2e. E o "tradutor" entre o que sua empresa faz e o que ela emite.
+
+No Brasil, os fatores oficiais sao publicados pelo **MCTI** (Ministerio da Ciencia, Tecnologia e Inovacao) atraves do sistema SIRENE. A tabela cobre:
+
+- **Combustao estacionaria** — fatores para gas natural, GLP, diesel, oleo combustivel, lenha, carvao
+- **Combustao movel** — fatores por tipo de veiculo e combustivel (diesel, gasolina, etanol, GNV)
+- **Processos industriais** — fatores para cimento, cal, vidro, quimicos
+- **Tratamento de residuos** — fatores para aterro, compostagem, tratamento de efluentes
+- **Grid eletrico (SIN)** — fator de emissao da eletricidade, atualizado mensalmente
+
+Para converter cada gas em CO2 equivalente, aplica-se o **GWP** (Potencial de Aquecimento Global) do IPCC (Painel Intergovernamental sobre Mudancas Climaticas) AR5 (2014): CO2 tem GWP=1, CH4 tem GWP=28 e N2O tem GWP=265. Isso significa que 1 tonelada de metano equivale a 28 toneladas de CO2 em termos de impacto climatico.
+
+<InfoBox type="info">
+Os fatores de emissao do MCTI sao atualizados periodicamente. O fator do grid eletrico (SIN) varia mensalmente. Sempre consulte a versao mais recente em gov.br/mcti antes de calcular seu inventario. A Ferramenta GHG Protocol Tool ja incorpora os fatores MCTI atualizados.
+</InfoBox>
+
+**Como usar na pratica:**
+
+A formula basica e: **Emissao (tCO2e) = Dado de atividade x Fator de emissao x GWP**
+
+Por exemplo: se sua empresa consumiu 10.000 litros de diesel em um ano, voce multiplica 10.000 pelo fator de emissao do diesel (fornecido pelo MCTI, em kg CO2/litro) e converte para toneladas. A Ferramenta GHG Protocol Tool faz esse calculo automaticamente — voce insere os dados de atividade e a ferramenta aplica os fatores corretos.
+
+## Passo a passo para elaborar seu inventario GEE (7 etapas)
+
+<AnswerBlock>
+A elaboracao de um inventario GEE segue sete etapas baseadas no GHG Protocol Corporate Standard: definir limites organizacionais, definir limites operacionais (escopos), identificar fontes de emissao, coletar dados de atividade, aplicar fatores de emissao do MCTI, calcular e consolidar emissoes em tCO2e, e verificar e publicar no Registro Publico. O processo leva de 2 a 6 meses para o primeiro inventario completo.
+</AnswerBlock>
+
+**Key takeaway: Reserve 2 a 6 meses e priorize a coleta de dados de atividade — e a etapa mais trabalhosa e define a qualidade final.**
+
+O processo de elaboracao de um inventario de carbono empresa segue uma sequencia logica baseada no GHG Protocol Corporate Standard (WRI/WBCSD, 2004 rev. 2015). Estas sao as sete etapas:
+
+### Etapa 1: Definir limites organizacionais
+
+Escolha a abordagem de consolidacao: **controle operacional** (inclui 100% das emissoes de tudo que voce opera) ou **participacao acionaria** (inclui proporcionalmente). Mapeie quais unidades, filiais e subsidiarias entram no inventario.
+
+Para PMEs com estrutura simples (uma ou poucas unidades, sem participacoes societarias cruzadas), o controle operacional e quase sempre a melhor escolha. Ele e mais intuitivo e evita calculos proporcionais complexos.
+
+### Etapa 2: Definir limites operacionais (escopos)
+
+Decida quais escopos serao cobertos. O minimo exigido pelo GHG Protocol e **Escopos 1 e 2**. O Escopo 3 e recomendado, especialmente se sua empresa e pressionada por clientes ou investidores, mas nao e obrigatorio no primeiro inventario.
+
+Se for incluir Escopo 3, identifique quais das 15 categorias sao relevantes para o seu negocio. Para a maioria das PMEs de servicos, as categorias mais significativas sao: bens adquiridos, transporte de mercadorias, residuos e deslocamento de funcionarios.
+
+### Etapa 3: Identificar fontes de emissao
+
+Liste todas as fontes por escopo:
+
+- **Escopo 1:** Geradores diesel, caldeiras, fornos, frota propria, sistemas de refrigeracao e ar-condicionado, processos industriais
+- **Escopo 2:** Faturas de energia eletrica, contratos de vapor ou aquecimento
+- **Escopo 3 (se aplicavel):** Notas fiscais de fornecedores, registros de frete, dados de residuos, pesquisas de deslocamento de funcionarios
+
+### Etapa 4: Coletar dados de atividade
+
+Levante os dados operacionais de cada fonte para o periodo de 12 meses (ano-calendario ou ano-fiscal):
+
+- Litros de combustivel (diesel, gasolina, GLP, gas natural)
+- kWh de eletricidade consumida (faturas da concessionaria)
+- Quilometros rodados pela frota
+- Toneladas de residuos gerados e destinacao de cada tipo
+- Quilogramas de gas refrigerante recargado em equipamentos de refrigeracao
+
+Este e o passo mais trabalhoso. Dados fragmentados em planilhas, notas fiscais e sistemas diferentes precisam ser consolidados. Invista tempo aqui — a qualidade do inventario depende da qualidade dos dados de atividade.
+
+### Etapa 5: Selecionar e aplicar fatores de emissao
+
+Use os **fatores de emissao do MCTI** para fontes brasileiras. Para o grid eletrico, use o fator medio anual do SIN publicado pelo MCTI (ou o fator mensal, se tiver dados de consumo mensal). Aplique o GWP do IPCC AR5 para converter cada gas em CO2e.
+
+A **Ferramenta GHG Protocol Tool**, disponivel gratuitamente no site do Programa Brasileiro GHG Protocol, automatiza esse calculo. Voce insere os dados de atividade e a ferramenta aplica os fatores corretos.
+
+### Etapa 6: Calcular e consolidar emissoes
+
+Some as emissoes por escopo e calcule o total. Expresse tudo em **tCO2e**. Se voce ja tem um inventario anterior, compare com o ano-base para avaliar evolucao. Identifique as fontes mais relevantes (analise de hotspots) — elas serao prioridade nas acoes de reducao.
+
+### Etapa 7: Verificar e publicar
+
+Duas decisoes finais:
+
+- **Verificacao de terceira parte** — opcional, mas necessaria para obter a classificacao **Ouro** no Registro Publico do GHG Protocol Brasil. Segue a **ISO 14064-3** e e realizada por organismo acreditado pelo INMETRO (Instituto Nacional de Metrologia, Qualidade e Tecnologia). Adiciona credibilidade maxima ao inventario.
+- **Publicacao no Registro Publico de Emissoes** — a plataforma do Programa Brasileiro GHG Protocol onde **1.315 inventarios foram publicados no Ciclo 2025, segundo FGVces (2025)**. A publicacao e voluntaria e classifica o inventario em tres categorias:
+
+| Categoria | Requisitos |
+|---|---|
+| **Ouro** | Escopos 1, 2 e 3, com verificacao externa |
+| **Prata** | Escopos 1, 2 e 3, sem verificacao |
+| **Bronze** | Apenas Escopos 1 e 2 |
+
+<InfoBox type="warning">
+O inventario de GEE e um documento tecnico que exige conhecimento de metodologia GHG Protocol, fatores de emissao e limites organizacionais. Para empresas com operacoes complexas (multiplas unidades, processos industriais, cadeia de valor extensa), recomenda-se a contratacao de consultoria especializada ou verificador acreditado.
+</InfoBox>
+
+## Verificacao e publicacao: Programa GHG Protocol Brasil e Registro Publico
+
+<AnswerBlock>
+O Programa Brasileiro GHG Protocol, gerido pelo FGVces em parceria com o WRI, e a principal estrutura de apoio ao inventario GEE no Brasil. No Ciclo 2025, atingiu 674 organizacoes-membro e 1.315 inventarios publicados no Registro Publico — crescimento de 33% em relacao ao ciclo anterior, segundo FGVces (2025). A publicacao classifica inventarios em Ouro, Prata e Bronze conforme escopos cobertos e verificacao externa.
+</AnswerBlock>
+
+**Key takeaway: Publique no Registro Publico de Emissoes — e gratuito, gera benchmark setorial e prepara sua empresa para quando o SBCE exigir historico.**
+
+O **Programa Brasileiro GHG Protocol**, gerido pelo FGVces em parceria com o WRI, e a principal estrutura de apoio ao inventario GEE corporativo no Brasil. No Ciclo 2025, o programa atingiu **674 organizacoes-membro**, com **1.315 inventarios publicados** no Registro Publico — crescimento de **33% em inventarios publicados** em relacao ao ciclo anterior, segundo FGVces (2025).
+
+O **Registro Publico de Emissoes** funciona como vitrine de transparencia climatica. Qualquer pessoa pode consultar os inventarios publicados e comparar dados entre empresas e setores. Para o gestor ambiental, publicar no Registro Publico gera:
+
+- **Credibilidade com clientes e investidores** — prova publica e verificavel de gestao de emissoes
+- **Benchmark setorial** — compare sua intensidade de emissoes com empresas do mesmo segmento
+- **Preparacao para o SBCE** — quando o mercado regulado exigir inventarios, voce ja tera historico e metodologia consolidados
+
+O fluxo de publicacao e direto: crie uma conta na plataforma do Programa Brasileiro GHG Protocol, preencha os dados do inventario usando a Ferramenta GHG Protocol Tool, submeta para revisao e escolha a categoria de publicacao (Ouro, Prata ou Bronze).
+
+Para a classificacao Ouro, a **verificacao de terceira parte** segue os requisitos da **ABNT NBR ISO 14064-1** (baseada na ISO 14064-1:2018). Organismos de verificacao acreditados pelo INMETRO auditam a integridade dos dados, a conformidade metodologica e a exatidao dos calculos. O processo leva de quatro a oito semanas e custa entre **R$ 10.000 e R$ 30.000**, dependendo da complexidade, segundo estimativas de mercado (2024-2025).
+
+## Quanto custa um inventario de carbono empresa e como escolher modalidade
+
+<AnswerBlock>
+O custo de um inventario de GEE para empresas de medio porte varia de R$ 3.000 a R$ 80.000, conforme escopos cobertos e modalidade. Plataformas SaaS custam R$ 3.000 a R$ 15.000/ano e atendem empresas com operacoes simples. Consultorias especializadas custam R$ 15.000 a R$ 80.000 por projeto e sao recomendadas para operacoes industriais complexas ou quando se busca verificacao Ouro no Registro Publico.
+</AnswerBlock>
+
+**Key takeaway: Para PMEs de servicos e comercio, plataformas SaaS de R$ 3.000 a R$ 15.000/ano entregam resultado rapido sem depender de consultoria.**
+
+O custo de um inventario de carbono empresa varia conforme tres fatores: escopos cobertos, complexidade das operacoes e modalidade de elaboracao. Para uma empresa de medio porte (100 a 500 funcionarios), as faixas de mercado sao:
+
+| Modalidade | Faixa de preco | O que inclui | Prazo medio |
+|---|---|---|---|
+| **Plataforma SaaS** (self-service) | R$ 3.000 — R$ 15.000/ano | Ferramenta de calculo, fatores atualizados, relatorio automatizado | 2-4 semanas |
+| **Consultoria** (Escopos 1+2) | R$ 15.000 — R$ 40.000 | Diagnostico, coleta de dados, calculo, relatorio, suporte para publicacao | 2-4 meses |
+| **Consultoria** (Escopos 1+2+3) | R$ 30.000 — R$ 80.000 | Tudo acima + mapeamento completo de cadeia de valor (15 categorias) | 3-6 meses |
+| **Verificacao** (adicional) | R$ 10.000 — R$ 30.000 | Auditoria independente conforme ISO 14064-3 | 4-8 semanas |
+
+Os valores sao estimativas de mercado e podem variar significativamente conforme o porte da empresa, numero de unidades, complexidade das operacoes e escopos cobertos. Solicite orcamentos de pelo menos tres fornecedores antes de contratar.
+
+**Quando a plataforma SaaS e a melhor escolha:**
+
+- Sua empresa tem operacoes relativamente simples (escritorio, frota pequena, sem processos industriais complexos)
+- Voce tem pelo menos um profissional interno com conhecimento basico de gestao ambiental
+- O orcamento e limitado e voce precisa de resultado rapido
+- Voce quer autonomia para atualizar o inventario anualmente sem depender de terceiros
+
+**Quando a consultoria e a melhor escolha:**
+
+- Sua empresa tem multiplas unidades, processos industriais ou operacoes complexas
+- E o primeiro inventario e voce nao tem equipe interna com experiencia em GHG Protocol
+- Voce precisa de verificacao Ouro para atender exigencias de clientes ou investidores
+- O Escopo 3 completo e necessario (mapeamento de cadeia de valor extensa)
+
+Honestidade: para empresas com operacoes industriais complexas ou que precisam de verificacao para a classificacao Ouro, a consultoria especializada para inventario de carbono empresa entrega mais valor. Plataformas SaaS sao excelentes para empresas de servicos e comercio, mas podem nao cobrir particularidades de processos industriais.
+
+## SBCE e o futuro do mercado de carbono brasileiro
+
+<AnswerBlock>
+O SBCE (Sistema Brasileiro de Comercio de Emissoes), instituido pela Lei 15.042/2024, transforma o inventario de GEE em obrigacao legal para empresas acima de 10.000 tCO2e/ano. A lei preve penalidades de 3% a 4% do faturamento bruto para descumprimento. Para PMEs, o impacto principal e o efeito cascata via Escopo 3: aproximadamente 5.000 empresas industriais reguladas exigirao dados de emissao de seus fornecedores.
+</AnswerBlock>
+
+**Key takeaway: Nao espere o decreto regulamentador — comece o inventario agora e tera dados historicos quando a regulamentacao chegar.**
+
+O **SBCE** (Sistema Brasileiro de Comercio de Emissoes) e o mercado regulado de carbono do Brasil, instituido pela **Lei 15.042/2024**. Ele transforma o inventario de GEE de ferramenta voluntaria em obrigacao legal para milhares de empresas.
+
+A **Lei 12.187/2009** — PNMC (Politica Nacional sobre Mudanca do Clima) — ja autorizava a criacao de um mercado de carbono (Art. 9o), mas foram necessarios 15 anos ate a aprovacao do marco regulatorio. A Lei 15.042/2024 define cinco fases de implementacao (Art. 50), com penalidades de **3% a 4% do faturamento bruto** ou **R$ 50 mil a R$ 20 milhoes** para operadores em descumprimento (Art. 37).
+
+O contexto internacional acelera essa transicao. A NDC (Contribuicao Nacionalmente Determinada) brasileira atualizada em novembro de 2024 estabelece meta de reducao de **59% a 67% das emissoes ate 2035** em relacao a 2005, e meta absoluta de **1,20 GtCO2e para 2030**, segundo MMA/UNFCCC (2024). Em 2024, as emissoes brutas do Brasil foram de **2,145 GtCO2e** — uma queda de **16,7%** em relacao a 2023, mas ainda quase o dobro da meta 2030, segundo SEEG (Sistema de Estimativas de Emissoes e Remocoes de Gases de Efeito Estufa)/Observatorio do Clima (2025).
+
+Para PMEs, o impacto mais relevante e o **efeito cascata via Escopo 3**. O setor de energia e processos industriais, que responde por aproximadamente **22% das emissoes brutas do Brasil, segundo SEEG/Observatorio do Clima (2024)**, e o primariamente coberto pelo SBCE. As empresas reguladas desse setor vao exigir dados de emissao de toda a cadeia de fornecedores.
+
+Alem do SBCE, o **CBAM** (Mecanismo de Ajuste de Carbono na Fronteira) da Uniao Europeia ja exige que importadores europeus reportem emissoes embutidas em produtos desde outubro de 2023, com cobranca financeira a partir de 2026. Para exportadores brasileiros de aco, aluminio, cimento e fertilizantes — e seus fornecedores — ter um inventario GEE deixou de ser opcao.
+
+O **Decreto 12.768/2025** criou o Comite Tecnico Consultivo Permanente do SBCE, sinalizando que a regulamentacao detalhada esta em andamento. O conselho pratico: nao espere o decreto sair. Comece seu inventario de carbono empresa agora, com os Escopos 1 e 2. Quando a regulamentacao chegar, voce ja tera dados historicos e metodologia consolidada.
+
+Para uma analise detalhada dos limiares, fases e implicacoes da lei, leia nosso artigo sobre a [Lei 15.042/2024 e o SBCE](/inventario-carbono/lei-15042-2024-sbce-mercado-carbono/).
+
+<RegulationMappingTable items={[
+  {
+    name: "Sistema Brasileiro de Comercio de Emissoes (SBCE)",
+    number: "Lei 15.042/2024",
+    scope: "Federal — empresas acima de 10.000 tCO2e/ano (relato) ou 25.000 tCO2e/ano (cap-and-trade)",
+    status: "Vigente — pendente de regulamentacao (decreto regulamentador nao publicado ate abril/2026)",
+    officialLink: "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/lei/L15042.htm"
+  },
+  {
+    name: "Politica Nacional sobre Mudanca do Clima (PNMC)",
+    number: "Lei 12.187/2009",
+    scope: "Federal — base legal para instrumentos de mercado de carbono e inventarios de emissoes",
+    status: "Vigente com alteracoes pela Lei 15.042/2024",
+    officialLink: "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2009/lei/l12187.htm"
+  },
+  {
+    name: "Acordo de Paris (promulgacao)",
+    number: "Decreto 9.073/2017",
+    scope: "Federal — compromissos internacionais de reducao de emissoes (NDC: 59-67% ate 2035 vs. 2005)",
+    status: "Vigente",
+    officialLink: "https://www.gov.br/mma/pt-br/assuntos/mudanca-do-clima/NDC"
+  },
+  {
+    name: "Relatorio de sustentabilidade obrigatorio para S.A. (IFRS S1/S2)",
+    number: "Resolucao CVM 193/2023",
+    scope: "Federal — companhias abertas (divulgacao de emissoes GEE Escopos 1, 2 e 3)",
+    status: "Vigente — adocao voluntaria 2026, obrigatoria 2028",
+    officialLink: "https://conteudo.cvm.gov.br/legislacao/resolucoes/resol193.html"
+  },
+  {
+    name: "CBAM — Mecanismo de Ajuste de Carbono na Fronteira (UE)",
+    number: "Regulamento UE 2023/956",
+    scope: "Internacional — exportadores brasileiros de aco, aluminio, cimento, fertilizantes, eletricidade, hidrogenio",
+    status: "Vigente — reporte desde out/2023, cobranca financeira a partir de 2026",
+    officialLink: "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism_en"
+  },
+  {
+    name: "GHG Protocol Corporate Standard",
+    number: "WRI/WBCSD, 2004 (rev. 2015)",
+    scope: "Internacional — metodologia padrao para inventarios GEE corporativos (adotada pelo Programa Brasileiro GHG Protocol)",
+    status: "Vigente",
+    officialLink: "https://ghgprotocol.org/corporate-standard"
+  },
+  {
+    name: "ISO 14064-1 — Inventarios de GEE",
+    number: "ABNT NBR ISO 14064-1:2007 (baseada na ISO 14064-1:2018)",
+    scope: "Internacional/Nacional — norma para verificacao de terceira parte de inventarios GEE",
+    status: "Vigente",
+    officialLink: "https://www.abntcatalogo.com.br/"
+  },
+  {
+    name: "Fatores de Emissao — SIRENE/MCTI",
+    number: "Publicacao periodica MCTI",
+    scope: "Federal — fatores oficiais para converter dados de atividade em tCO2e no Brasil",
+    status: "Vigente — atualizado mensalmente (fator SIN)",
+    officialLink: "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/sirene/emissoes/fatores-de-emissao"
+  },
+  {
+    name: "Decreto 12.768/2025 — Comite Tecnico SBCE",
+    number: "Decreto 12.768/2025",
+    scope: "Federal — cria o Comite Tecnico Consultivo Permanente do SBCE",
+    status: "Vigente",
+    officialLink: "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/decreto/D12768.htm"
+  }
+]} />
+
+{/* Pilares nao usam FAQ schema */}
+
+<CitationFooter items={[
+  {
+    id: 1,
+    type: "relatorio",
+    citation: "FGVces — CENTRO DE ESTUDOS EM SUSTENTABILIDADE DA FGV. Programa Brasileiro GHG Protocol: resultados Ciclo 2025. Sao Paulo: FGVces, 2025.",
+    url: "https://eaesp.fgv.br/centros/centro-estudos-sustentabilidade/noticias/programa-brasileiro-ghg-protocol-anuncia-resultados-ciclo-2025-com-crescimento-recorde-e"
+  },
+  {
+    id: 2,
+    type: "norma",
+    citation: "WORLD RESOURCES INSTITUTE; WORLD BUSINESS COUNCIL FOR SUSTAINABLE DEVELOPMENT. The Greenhouse Gas Protocol: a corporate accounting and reporting standard. Rev. ed. Washington, DC: WRI; Geneva: WBCSD, 2004 (rev. 2015).",
+    url: "https://ghgprotocol.org/corporate-standard"
+  },
+  {
+    id: 3,
+    type: "norma",
+    citation: "WORLD RESOURCES INSTITUTE; WORLD BUSINESS COUNCIL FOR SUSTAINABLE DEVELOPMENT. Corporate Value Chain (Scope 3) Accounting and Reporting Standard. Washington, DC: WRI; Geneva: WBCSD, 2011.",
+    url: "https://ghgprotocol.org/corporate-value-chain-scope-3-standard"
+  },
+  {
+    id: 4,
+    type: "legislacao",
+    citation: "BRASIL. Lei no 15.042, de 11 de dezembro de 2024. Institui o Sistema Brasileiro de Comercio de Emissoes de Gases de Efeito Estufa. Diario Oficial da Uniao, Brasilia, DF, 12 dez. 2024.",
+    url: "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/lei/L15042.htm"
+  },
+  {
+    id: 5,
+    type: "legislacao",
+    citation: "BRASIL. Lei no 12.187, de 29 de dezembro de 2009. Institui a Politica Nacional sobre Mudanca do Clima (PNMC). Diario Oficial da Uniao, Brasilia, DF, 30 dez. 2009.",
+    url: "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2009/lei/l12187.htm"
+  },
+  {
+    id: 6,
+    type: "relatorio",
+    citation: "BRASIL. Ministerio do Meio Ambiente e Mudanca do Clima. Contribuicao Nacionalmente Determinada (NDC) atualizada. Brasilia: MMA, 2024.",
+    url: "https://www.gov.br/mma/pt-br/assuntos/mudanca-do-clima/NDC"
+  },
+  {
+    id: 7,
+    type: "dado-estatistico",
+    citation: "SISTEMA DE ESTIMATIVAS DE EMISSOES E REMOCOES DE GASES DE EFEITO ESTUFA (SEEG); OBSERVATORIO DO CLIMA. Emissoes brutas do Brasil 2024. Sao Paulo: SEEG, 2025.",
+    url: "https://seeg.eco.br/"
+  },
+  {
+    id: 8,
+    type: "dado-estatistico",
+    citation: "SISTEMA DE ESTIMATIVAS DE EMISSOES E REMOCOES DE GASES DE EFEITO ESTUFA (SEEG); OBSERVATORIO DO CLIMA. Relatorio analitico de emissoes de GEE no Brasil. Sao Paulo: SEEG, 2024.",
+    url: "https://seeg.eco.br/wp-content/uploads/2024/11/SEEG-RELATORIO-ANALITICO-12.pdf"
+  },
+  {
+    id: 9,
+    type: "site-oficial",
+    citation: "BRASIL. Ministerio da Fazenda. Sancionada a lei que estabelece as bases para um mercado regulado de carbono no Brasil. Brasilia: MF, 2024.",
+    url: "https://www.gov.br/fazenda/pt-br/assuntos/noticias/2024/dezembro/Sancionada-a-lei-que-estabelece-as-bases-para-um-mercado-regulado-de-carbono-no-Brasil"
+  },
+  {
+    id: 10,
+    type: "relatorio",
+    citation: "EMPRESA DE PESQUISA ENERGETICA (EPE). Balanco Energetico Nacional 2024: ano base 2023. Rio de Janeiro: EPE, 2024.",
+    url: "https://www.epe.gov.br/pt/publicacoes-dados-abertos/publicacoes/balanco-energetico-nacional-2024"
+  },
+  {
+    id: 11,
+    type: "relatorio",
+    citation: "CONFEDERACAO NACIONAL DA INDUSTRIA (CNI). CBAM: o que voce precisa saber sobre o Mecanismo Europeu de Ajuste de Carbono na Fronteira. Brasilia: CNI, 2023.",
+    url: "https://noticias.portaldaindustria.com.br/noticias/internacional/cbam-o-que-voce-precisa-saber-sobre-o-mecanismo-europeu-de-ajuste-de-carbono-na-fronteira/"
+  },
+  {
+    id: 12,
+    type: "site-oficial",
+    citation: "BRASIL. Ministerio da Ciencia, Tecnologia e Inovacao (MCTI). Fatores de emissao: SIRENE. Brasilia: MCTI, [s.d.].",
+    url: "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/sirene/emissoes/fatores-de-emissao"
+  },
+  {
+    id: 13,
+    type: "legislacao",
+    citation: "BRASIL. Comissao de Valores Mobiliarios. Resolucao CVM no 193, de 20 de outubro de 2023. Dispoe sobre a elaboracao e divulgacao do relatorio de informacoes financeiras relacionadas a sustentabilidade. Diario Oficial da Uniao, Brasilia, DF, 23 out. 2023.",
+    url: "https://conteudo.cvm.gov.br/legislacao/resolucoes/resol193.html"
+  },
+  {
+    id: 14,
+    type: "relatorio",
+    citation: "INTERGOVERNMENTAL PANEL ON CLIMATE CHANGE (IPCC). Climate Change 2014: Synthesis Report — Fifth Assessment Report (AR5). Geneva: IPCC, 2014."
+  }
+]} />
+
+<SocialProof
+  stat="674"
+  label="organizacoes ja publicam inventarios GEE no Registro Publico brasileiro"
+/>
+
+<CTAFinal
+  title="Inclua dados de emissoes no seu Relatorio de Sustentabilidade"
+  description="O inventario GEE e um dos indicadores mais relevantes para demonstrar gestao ambiental. Gere seu relatorio de sustentabilidade com dados reais da sua empresa."
+  buttonText="Ver planos"
+  href="/relatorio-sustentabilidade/precos/"
+/>
+
+<ArticleFooter
+  author="Equipe Paloma"
+  reviewedBy="Dra. Carolina Mendes, Engenheira Ambiental (CREA-MG)"
+  publishedAt="2026-04-02"
+  updatedAt="2026-04-02"
+/>
